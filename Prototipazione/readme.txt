@@ -1,0 +1,1 @@
+Ecco, qui inseriremo i mock-up di tutte le interfacce grafiche che implementeremo.
