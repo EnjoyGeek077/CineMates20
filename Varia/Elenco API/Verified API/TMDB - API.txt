@@ -1,0 +1,25 @@
+Esempio Richiesta API
+https://api.themoviedb.org/3/movie/550?api_key=303d133a4466b67a3da55076b34f33ba
+
+Chiave API (v3 auth)
+303d133a4466b67a3da55076b34f33ba
+
+API Read Access Token (v4 auth)
+eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiIzMDNkMTMzYTQ0NjZiNjdhM2RhNTUwNzZiMzRmMzNiYSIsInN1YiI6IjYwNTYyM2RhNmUzZGViMDAzZGUwNjQ5ZSIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.lSWMHSfiiX_l0M-_a8yequOKpZNfbTRrUyuJ8rUoJcU
+
+---
+
+Get Started:
+https://www.themoviedb.org/documentation/api
+
+Documentazione:
+https://developers.themoviedb.org/3/getting-started/introduction
+
+Wrappers & libraries: https://www.themoviedb.org/documentation/api/wrappers-libraries
+
+Support forum: https://www.themoviedb.org/talk/category/5047958519c29526b50017d6
+
+---
+
+The Movie Database Team
+https://www.themoviedb.org
