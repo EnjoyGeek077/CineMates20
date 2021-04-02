@@ -1,0 +1,9 @@
+Firebase:
+https://firebase.google.com/?authuser=1
+https://firebase.google.com/docs?authuser=1
+
+---
+
+AWS:
+https://aws.amazon.com/it/
+https://docs.aws.amazon.com/index.html

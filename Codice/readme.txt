@@ -1,1 +1,0 @@
-Ecco, qui inseriremo le cartelle di progetto Desktop/Android (Separato).
