@@ -37535,6 +37535,7 @@
 								"$ref": "AAAAAAF42hk08FeiFz0="
 							},
 							"name": "buttonAmici",
+							"visibility": "private",
 							"type": "Button"
 						},
 						{
@@ -37544,6 +37545,7 @@
 								"$ref": "AAAAAAF42hk08FeiFz0="
 							},
 							"name": "buttonListaFilm",
+							"visibility": "private",
 							"type": "Button"
 						},
 						{
@@ -37553,6 +37555,7 @@
 								"$ref": "AAAAAAF42hk08FeiFz0="
 							},
 							"name": "buttonImpostazioni",
+							"visibility": "private",
 							"type": "Button"
 						},
 						{
@@ -37562,6 +37565,7 @@
 								"$ref": "AAAAAAF42hk08FeiFz0="
 							},
 							"name": "listViewRecensioni",
+							"visibility": "private",
 							"type": "ListView<Recensioni>"
 						},
 						{
@@ -37571,6 +37575,7 @@
 								"$ref": "AAAAAAF42hk08FeiFz0="
 							},
 							"name": "textViewNome",
+							"visibility": "private",
 							"type": "TextView"
 						},
 						{
@@ -37580,6 +37585,7 @@
 								"$ref": "AAAAAAF42hk08FeiFz0="
 							},
 							"name": "textViewDescrizione",
+							"visibility": "private",
 							"type": "TextView"
 						},
 						{
@@ -37589,6 +37595,7 @@
 								"$ref": "AAAAAAF42hk08FeiFz0="
 							},
 							"name": "labelNumLike",
+							"visibility": "private",
 							"type": "Label"
 						},
 						{
@@ -37598,6 +37605,7 @@
 								"$ref": "AAAAAAF42hk08FeiFz0="
 							},
 							"name": "imageFotoProfilo",
+							"visibility": "private",
 							"type": "Image"
 						}
 					],
@@ -39766,7 +39774,7 @@
 											"top": 163,
 											"width": 328.376953125,
 											"height": 13,
-											"text": "+imageFoto: Image",
+											"text": "-imageFoto: Image",
 											"horizontalAlignment": 0
 										},
 										{
@@ -39783,7 +39791,7 @@
 											"top": 178,
 											"width": 328.376953125,
 											"height": 13,
-											"text": "+textViewDescrizione: TextView",
+											"text": "-textViewDescrizione: TextView",
 											"horizontalAlignment": 0
 										},
 										{
@@ -39800,7 +39808,7 @@
 											"top": 193,
 											"width": 328.376953125,
 											"height": 13,
-											"text": "+textViewAnno: TextView",
+											"text": "-textViewAnno: TextView",
 											"horizontalAlignment": 0
 										},
 										{
@@ -39817,7 +39825,7 @@
 											"top": 208,
 											"width": 328.376953125,
 											"height": 13,
-											"text": "+textViewCategoria: TextView",
+											"text": "-textViewCategoria: TextView",
 											"horizontalAlignment": 0
 										},
 										{
@@ -39834,7 +39842,7 @@
 											"top": 223,
 											"width": 328.376953125,
 											"height": 13,
-											"text": "+textViewCertificazione: TextView",
+											"text": "-textViewCertificazione: TextView",
 											"horizontalAlignment": 0
 										},
 										{
@@ -39851,7 +39859,7 @@
 											"top": 238,
 											"width": 328.376953125,
 											"height": 13,
-											"text": "+textViewTempo: TextView",
+											"text": "-textViewTempo: TextView",
 											"horizontalAlignment": 0
 										},
 										{
@@ -39868,7 +39876,7 @@
 											"top": 253,
 											"width": 328.376953125,
 											"height": 13,
-											"text": "+textViewRegista: TextView",
+											"text": "-textViewRegista: TextView",
 											"horizontalAlignment": 0
 										},
 										{
@@ -39885,7 +39893,7 @@
 											"top": 268,
 											"width": 328.376953125,
 											"height": 13,
-											"text": "+textViewAttore: TextView",
+											"text": "-textViewAttore: TextView",
 											"horizontalAlignment": 0
 										},
 										{
@@ -39902,7 +39910,7 @@
 											"top": 283,
 											"width": 328.376953125,
 											"height": 13,
-											"text": "+textViewVoto: TextView",
+											"text": "-textViewVoto: TextView",
 											"horizontalAlignment": 0
 										},
 										{
@@ -39919,7 +39927,7 @@
 											"top": 298,
 											"width": 328.376953125,
 											"height": 13,
-											"text": "+listViewRecensioni: ListView<Recensioni>",
+											"text": "-listViewRecensioni: ListView<Recensioni>",
 											"horizontalAlignment": 0
 										},
 										{
@@ -39936,7 +39944,7 @@
 											"top": 313,
 											"width": 328.376953125,
 											"height": 13,
-											"text": "+buttonAggiungiAllaLista: Button",
+											"text": "-buttonAggiungiAllaLista: Button",
 											"horizontalAlignment": 0
 										},
 										{
@@ -39953,7 +39961,7 @@
 											"top": 328,
 											"width": 328.376953125,
 											"height": 13,
-											"text": "+buttonLike: Button",
+											"text": "-buttonLike: Button",
 											"horizontalAlignment": 0
 										},
 										{
@@ -39970,7 +39978,7 @@
 											"top": 343,
 											"width": 328.376953125,
 											"height": 13,
-											"text": "+buttonAggiungiFeed: Button",
+											"text": "-buttonAggiungiFeed: Button",
 											"horizontalAlignment": 0
 										}
 									],
@@ -41996,6 +42004,7 @@
 								"$ref": "AAAAAAF42p4m1LL1500="
 							},
 							"name": "imageFoto",
+							"visibility": "private",
 							"type": "Image"
 						},
 						{
@@ -42005,6 +42014,7 @@
 								"$ref": "AAAAAAF42p4m1LL1500="
 							},
 							"name": "textViewDescrizione",
+							"visibility": "private",
 							"type": "TextView"
 						},
 						{
@@ -42014,6 +42024,7 @@
 								"$ref": "AAAAAAF42p4m1LL1500="
 							},
 							"name": "textViewAnno",
+							"visibility": "private",
 							"type": "TextView"
 						},
 						{
@@ -42023,6 +42034,7 @@
 								"$ref": "AAAAAAF42p4m1LL1500="
 							},
 							"name": "textViewCategoria",
+							"visibility": "private",
 							"type": "TextView"
 						},
 						{
@@ -42032,6 +42044,7 @@
 								"$ref": "AAAAAAF42p4m1LL1500="
 							},
 							"name": "textViewCertificazione",
+							"visibility": "private",
 							"type": "TextView"
 						},
 						{
@@ -42041,6 +42054,7 @@
 								"$ref": "AAAAAAF42p4m1LL1500="
 							},
 							"name": "textViewTempo",
+							"visibility": "private",
 							"type": "TextView"
 						},
 						{
@@ -42050,6 +42064,7 @@
 								"$ref": "AAAAAAF42p4m1LL1500="
 							},
 							"name": "textViewRegista",
+							"visibility": "private",
 							"type": "TextView"
 						},
 						{
@@ -42059,6 +42074,7 @@
 								"$ref": "AAAAAAF42p4m1LL1500="
 							},
 							"name": "textViewAttore",
+							"visibility": "private",
 							"type": "TextView"
 						},
 						{
@@ -42068,6 +42084,7 @@
 								"$ref": "AAAAAAF42p4m1LL1500="
 							},
 							"name": "textViewVoto",
+							"visibility": "private",
 							"type": "TextView"
 						},
 						{
@@ -42077,6 +42094,7 @@
 								"$ref": "AAAAAAF42p4m1LL1500="
 							},
 							"name": "listViewRecensioni",
+							"visibility": "private",
 							"type": "ListView<Recensioni>"
 						},
 						{
@@ -42086,6 +42104,7 @@
 								"$ref": "AAAAAAF42p4m1LL1500="
 							},
 							"name": "buttonAggiungiAllaLista",
+							"visibility": "private",
 							"type": "Button"
 						},
 						{
@@ -42095,6 +42114,7 @@
 								"$ref": "AAAAAAF42p4m1LL1500="
 							},
 							"name": "buttonLike",
+							"visibility": "private",
 							"type": "Button"
 						},
 						{
@@ -42104,6 +42124,7 @@
 								"$ref": "AAAAAAF42p4m1LL1500="
 							},
 							"name": "buttonAggiungiFeed",
+							"visibility": "private",
 							"type": "Button"
 						}
 					],
@@ -42622,7 +42643,7 @@
 											"top": 275,
 											"width": 328.376953125,
 											"height": 13,
-											"text": "+imageFoto: Image",
+											"text": "-imageFoto: Image",
 											"horizontalAlignment": 0
 										},
 										{
@@ -42639,7 +42660,7 @@
 											"top": 290,
 											"width": 328.376953125,
 											"height": 13,
-											"text": "+textViewDescrizione: TextView",
+											"text": "-textViewDescrizione: TextView",
 											"horizontalAlignment": 0
 										},
 										{
@@ -42656,7 +42677,7 @@
 											"top": 305,
 											"width": 328.376953125,
 											"height": 13,
-											"text": "+textViewAnno: TextView",
+											"text": "-textViewAnno: TextView",
 											"horizontalAlignment": 0
 										},
 										{
@@ -42673,7 +42694,7 @@
 											"top": 320,
 											"width": 328.376953125,
 											"height": 13,
-											"text": "+textViewCategoria: TextView",
+											"text": "-textViewCategoria: TextView",
 											"horizontalAlignment": 0
 										},
 										{
@@ -42690,7 +42711,7 @@
 											"top": 335,
 											"width": 328.376953125,
 											"height": 13,
-											"text": "+textViewCertificazione: TextView",
+											"text": "-textViewCertificazione: TextView",
 											"horizontalAlignment": 0
 										},
 										{
@@ -42707,7 +42728,7 @@
 											"top": 350,
 											"width": 328.376953125,
 											"height": 13,
-											"text": "+textViewTempo: TextView",
+											"text": "-textViewTempo: TextView",
 											"horizontalAlignment": 0
 										},
 										{
@@ -42724,7 +42745,7 @@
 											"top": 365,
 											"width": 328.376953125,
 											"height": 13,
-											"text": "+textViewRegista: TextView",
+											"text": "-textViewRegista: TextView",
 											"horizontalAlignment": 0
 										},
 										{
@@ -42741,7 +42762,7 @@
 											"top": 380,
 											"width": 328.376953125,
 											"height": 13,
-											"text": "+textViewAttore: TextView",
+											"text": "-textViewAttore: TextView",
 											"horizontalAlignment": 0
 										},
 										{
@@ -42758,7 +42779,7 @@
 											"top": 395,
 											"width": 328.376953125,
 											"height": 13,
-											"text": "+textViewVoto: TextView",
+											"text": "-textViewVoto: TextView",
 											"horizontalAlignment": 0
 										},
 										{
@@ -42775,7 +42796,7 @@
 											"top": 410,
 											"width": 328.376953125,
 											"height": 13,
-											"text": "+listViewRecensioni: ListView<Recensioni>",
+											"text": "-listViewRecensioni: ListView<Recensioni>",
 											"horizontalAlignment": 0
 										},
 										{
@@ -42792,7 +42813,7 @@
 											"top": 425,
 											"width": 328.376953125,
 											"height": 13,
-											"text": "+buttonAggiungiAllaLista: Button",
+											"text": "-buttonAggiungiAllaLista: Button",
 											"horizontalAlignment": 0
 										},
 										{
@@ -42809,7 +42830,7 @@
 											"top": 440,
 											"width": 328.376953125,
 											"height": 13,
-											"text": "+buttonLike: Button",
+											"text": "-buttonLike: Button",
 											"horizontalAlignment": 0
 										},
 										{
@@ -42826,7 +42847,7 @@
 											"top": 455,
 											"width": 328.376953125,
 											"height": 13,
-											"text": "+buttonAggiungiFeed: Button",
+											"text": "-buttonAggiungiFeed: Button",
 											"horizontalAlignment": 0
 										}
 									],
@@ -43075,7 +43096,7 @@
 											"top": 283,
 											"width": 303,
 											"height": 13,
-											"text": "+buttonAmici: Button",
+											"text": "-buttonAmici: Button",
 											"horizontalAlignment": 0
 										},
 										{
@@ -43092,7 +43113,7 @@
 											"top": 298,
 											"width": 303,
 											"height": 13,
-											"text": "+buttonListaFilm: Button",
+											"text": "-buttonListaFilm: Button",
 											"horizontalAlignment": 0
 										},
 										{
@@ -43109,7 +43130,7 @@
 											"top": 313,
 											"width": 303,
 											"height": 13,
-											"text": "+buttonImpostazioni: Button",
+											"text": "-buttonImpostazioni: Button",
 											"horizontalAlignment": 0
 										},
 										{
@@ -43126,7 +43147,7 @@
 											"top": 328,
 											"width": 303,
 											"height": 13,
-											"text": "+listViewRecensioni: ListView<Recensioni>",
+											"text": "-listViewRecensioni: ListView<Recensioni>",
 											"horizontalAlignment": 0
 										},
 										{
@@ -43143,7 +43164,7 @@
 											"top": 343,
 											"width": 303,
 											"height": 13,
-											"text": "+textViewNome: TextView",
+											"text": "-textViewNome: TextView",
 											"horizontalAlignment": 0
 										},
 										{
@@ -43160,7 +43181,7 @@
 											"top": 358,
 											"width": 303,
 											"height": 13,
-											"text": "+textViewDescrizione: TextView",
+											"text": "-textViewDescrizione: TextView",
 											"horizontalAlignment": 0
 										},
 										{
@@ -43177,7 +43198,7 @@
 											"top": 373,
 											"width": 303,
 											"height": 13,
-											"text": "+labelNumLike: Label",
+											"text": "-labelNumLike: Label",
 											"horizontalAlignment": 0
 										},
 										{
@@ -43194,7 +43215,7 @@
 											"top": 388,
 											"width": 303,
 											"height": 13,
-											"text": "+imageFotoProfilo: Image",
+											"text": "-imageFotoProfilo: Image",
 											"horizontalAlignment": 0
 										}
 									],
@@ -43442,7 +43463,7 @@
 											"top": 270,
 											"width": 250.630859375,
 											"height": 13,
-											"text": "+listViewRecensioni: ListView<Recensioni>",
+											"text": "-listViewRecensioni: ListView<Recensioni>",
 											"horizontalAlignment": 0
 										},
 										{
@@ -43459,7 +43480,7 @@
 											"top": 285,
 											"width": 250.630859375,
 											"height": 13,
-											"text": "+buttonLike: Button",
+											"text": "-buttonLike: Button",
 											"horizontalAlignment": 0
 										},
 										{
@@ -43476,7 +43497,7 @@
 											"top": 300,
 											"width": 250.630859375,
 											"height": 13,
-											"text": "+buttonDislike: Button",
+											"text": "-buttonDislike: Button",
 											"horizontalAlignment": 0
 										},
 										{
@@ -43493,7 +43514,7 @@
 											"top": 315,
 											"width": 250.630859375,
 											"height": 13,
-											"text": "+buttonCommento: Button",
+											"text": "-buttonCommento: Button",
 											"horizontalAlignment": 0
 										},
 										{
@@ -43510,7 +43531,7 @@
 											"top": 330,
 											"width": 250.630859375,
 											"height": 13,
-											"text": "+buttonUp: Button",
+											"text": "-buttonUp: Button",
 											"horizontalAlignment": 0
 										},
 										{
@@ -43527,7 +43548,7 @@
 											"top": 345,
 											"width": 250.630859375,
 											"height": 13,
-											"text": "+buttonDown: button",
+											"text": "-buttonDown: button",
 											"horizontalAlignment": 0
 										},
 										{
@@ -43544,7 +43565,7 @@
 											"top": 360,
 											"width": 250.630859375,
 											"height": 13,
-											"text": "+buttonOpzioni: Button",
+											"text": "-buttonOpzioni: Button",
 											"horizontalAlignment": 0
 										},
 										{
@@ -43561,7 +43582,7 @@
 											"top": 375,
 											"width": 250.630859375,
 											"height": 13,
-											"text": "+radioButtonReport: radioButton",
+											"text": "-radioButtonReport: radioButton",
 											"horizontalAlignment": 0
 										}
 									],
@@ -49756,6 +49777,7 @@
 								"$ref": "AAAAAAF421tmN8qBjLg="
 							},
 							"name": "listViewRecensioni",
+							"visibility": "private",
 							"type": "ListView<Recensioni>"
 						},
 						{
@@ -49765,6 +49787,7 @@
 								"$ref": "AAAAAAF421tmN8qBjLg="
 							},
 							"name": "buttonLike",
+							"visibility": "private",
 							"type": "Button"
 						},
 						{
@@ -49774,6 +49797,7 @@
 								"$ref": "AAAAAAF421tmN8qBjLg="
 							},
 							"name": "buttonDislike",
+							"visibility": "private",
 							"type": "Button"
 						},
 						{
@@ -49783,6 +49807,7 @@
 								"$ref": "AAAAAAF421tmN8qBjLg="
 							},
 							"name": "buttonCommento",
+							"visibility": "private",
 							"type": "Button"
 						},
 						{
@@ -49792,6 +49817,7 @@
 								"$ref": "AAAAAAF421tmN8qBjLg="
 							},
 							"name": "buttonUp",
+							"visibility": "private",
 							"type": "Button"
 						},
 						{
@@ -49801,6 +49827,7 @@
 								"$ref": "AAAAAAF421tmN8qBjLg="
 							},
 							"name": "buttonDown",
+							"visibility": "private",
 							"type": "button"
 						},
 						{
@@ -49810,6 +49837,7 @@
 								"$ref": "AAAAAAF421tmN8qBjLg="
 							},
 							"name": "buttonOpzioni",
+							"visibility": "private",
 							"type": "Button"
 						},
 						{
@@ -49819,6 +49847,7 @@
 								"$ref": "AAAAAAF421tmN8qBjLg="
 							},
 							"name": "radioButtonReport",
+							"visibility": "private",
 							"type": "radioButton"
 						}
 					],
