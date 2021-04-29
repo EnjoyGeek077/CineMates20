@@ -1,4 +1,5 @@
-/* package com.example.ingsw_cinemates20;
+/*
+package com.example.ingsw_cinemates20;
 
 import android.os.Bundle;
 import android.view.LayoutInflater;

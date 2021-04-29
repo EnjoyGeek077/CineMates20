@@ -68,8 +68,7 @@ public class Utente {
         Password = password;
     }
 
-    /* Il seguente codice permette di inserire una data e stamparla in un altro formato!!!
-
+    /*
        String s;
         Date d= null;
         System.out.println("Inserisci la data nel formato [gg/mm/yyyy]: ");
@@ -83,6 +82,6 @@ public class Utente {
             System.out.println("Formato inserito errato");
         }
         System.out.println(d);
-*/
+    */
 
 }
