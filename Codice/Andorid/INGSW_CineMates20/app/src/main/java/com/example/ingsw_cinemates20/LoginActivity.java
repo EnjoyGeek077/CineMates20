@@ -1,14 +1,15 @@
-package com.example.ingsw_cinemates20;
+/* package com.example.ingsw_cinemates20;
 
+import android.os.Bundle;
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.ViewGroup;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.viewpager.widget.ViewPager;
-import android.os.Bundle;
-import android.view.View;
-import android.widget.Button;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.android.material.tabs.TabLayout;
 
-public class MainActivity extends AppCompatActivity {
+public class LoginActivity extends AppCompatActivity {
 
     TabLayout tabLayout;
     ViewPager viewPager;
@@ -16,10 +17,9 @@ public class MainActivity extends AppCompatActivity {
     float v=0;
 
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
+    protected View onCreateView(Bundle savedInstanceState){
         super.onCreate(savedInstanceState);
         setContentView(R.layout.loginv3);
-
 
         tabLayout = findViewById(R.id.tab_layout);
         viewPager = findViewById(R.id.view_pager);
@@ -30,7 +30,6 @@ public class MainActivity extends AppCompatActivity {
         tabLayout.addTab(tabLayout.newTab().setText("Signup"));
         tabLayout.setTabGravity(tabLayout.GRAVITY_FILL);
 
-        // getTabCount() fa crashare il programma!
         final LoginAdapter adapter = new LoginAdapter(getSupportFragmentManager(),this, tabLayout.getTabCount());
         viewPager.setAdapter(adapter);
 
@@ -48,21 +47,6 @@ public class MainActivity extends AppCompatActivity {
         google.animate().translationY(0).alpha(1).setDuration(1000).setStartDelay(400).start();
 
 
-
-// sto cazzeggiando con i bottoni
-    /*    Button evento = (Button) findViewById(R.id.buttonLogin);
-        evento.setOnClickListener(new View.OnClickListener(){
-            @Override
-            public void onClick(View view) {
-                Button y = (Button) findViewById(R.id.buttonLogin);
-                y.setText("OK");
-            }});
-*/
-
-
     }
-
-
 }
-
-
+*/
