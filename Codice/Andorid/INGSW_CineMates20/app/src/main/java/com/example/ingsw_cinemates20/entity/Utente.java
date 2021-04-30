@@ -1,10 +1,4 @@
-package com.example.ingsw_cinemates20;
-
-import java.text.DateFormat;
-import java.text.ParseException;
-import java.util.Date;
-import java.util.Locale;
-import java.util.Scanner;
+package com.example.ingsw_cinemates20.entity;
 
 public class Utente {
 

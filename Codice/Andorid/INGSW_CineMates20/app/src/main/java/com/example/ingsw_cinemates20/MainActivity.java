@@ -1,10 +1,10 @@
 package com.example.ingsw_cinemates20;
 
+import android.os.Bundle;
+
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.viewpager.widget.ViewPager;
-import android.os.Bundle;
-import android.view.View;
-import android.widget.Button;
+
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.android.material.tabs.TabLayout;
 
@@ -26,13 +26,12 @@ public class MainActivity extends AppCompatActivity {
         fb = findViewById(R.id.fab_fb);
         google = findViewById(R.id.fab_google);
 
-        tabLayout.addTab(tabLayout.newTab().setText("Login"));
+        tabLayout.addTab(tabLayout.newTab().setText(""));
         tabLayout.addTab(tabLayout.newTab().setText("Signup"));
         tabLayout.setTabGravity(tabLayout.GRAVITY_FILL);
 
-        // getTabCount() fa crashare il programma!
-        final LoginAdapter adapter = new LoginAdapter(getSupportFragmentManager(),this, tabLayout.getTabCount());
-        viewPager.setAdapter(adapter);
+        //final LoginAdapter adapter = new LoginAdapter(getSupportFragmentManager(),this, tabLayout.getTabCount());
+        //viewPager.setAdapter(adapter);
 
         viewPager.addOnPageChangeListener(new TabLayout.TabLayoutOnPageChangeListener(tabLayout));
 
@@ -47,17 +46,15 @@ public class MainActivity extends AppCompatActivity {
         fb.animate().translationY(0).alpha(1).setDuration(1000).setStartDelay(400).start();
         google.animate().translationY(0).alpha(1).setDuration(1000).setStartDelay(400).start();
 
-
-
-// sto cazzeggiando con i bottoni
-    /*    Button evento = (Button) findViewById(R.id.buttonLogin);
+    /*
+        Button evento = (Button) findViewById(R.id.buttonLogin);
         evento.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View view) {
                 Button y = (Button) findViewById(R.id.buttonLogin);
                 y.setText("OK");
             }});
-*/
+    */
 
 
     }

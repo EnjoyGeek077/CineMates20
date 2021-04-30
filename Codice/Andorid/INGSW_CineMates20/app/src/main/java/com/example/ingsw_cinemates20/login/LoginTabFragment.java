@@ -1,4 +1,4 @@
-package com.example.ingsw_cinemates20;
+package com.example.ingsw_cinemates20.login;
 
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -9,6 +9,8 @@ import android.widget.EditText;
 import android.widget.TextView;
 
 import androidx.fragment.app.Fragment;
+
+import com.example.ingsw_cinemates20.R;
 
 public class LoginTabFragment extends Fragment {
     EditText email, pass;

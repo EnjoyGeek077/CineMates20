@@ -1,5 +1,5 @@
 /*
-package com.example.ingsw_cinemates20;
+package com.example.main;
 
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -31,7 +31,7 @@ public class LoginActivity extends AppCompatActivity {
         tabLayout.addTab(tabLayout.newTab().setText("Signup"));
         tabLayout.setTabGravity(tabLayout.GRAVITY_FILL);
 
-        final LoginAdapter adapter = new LoginAdapter(getSupportFragmentManager(),this, tabLayout.getTabCount());
+        final com.example.main.login.LoginAdapter adapter = new com.example.main.login.LoginAdapter(getSupportFragmentManager(),this, tabLayout.getTabCount());
         viewPager.setAdapter(adapter);
 
         viewPager.addOnPageChangeListener(new TabLayout.TabLayoutOnPageChangeListener(tabLayout));
