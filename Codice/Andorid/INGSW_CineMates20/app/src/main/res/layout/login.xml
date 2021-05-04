@@ -5,7 +5,7 @@
     android:id="@+id/panel"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#8FEFEDED"
+    android:background="@drawable/login_backgroung"
     android:scrollbarThumbHorizontal="@android:drawable/alert_dark_frame"
     android:scrollbarThumbVertical="@android:drawable/alert_dark_frame"
     android:visibility="visible"
@@ -20,7 +20,7 @@
         android:layout_marginRight="32dp"
         android:background="?android:attr/listDivider"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textViewPasswordDimenticata" />
+        app:layout_constraintTop_toBottomOf="@+id/textViewRecovery" />
 
     <ImageView
         android:id="@+id/imageView2"
@@ -53,7 +53,9 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/postalAddressEmail"
-        tools:text="   Password"
+        android:hint="Password"
+        android:paddingLeft="20dp"
+        android:background="@drawable/vie_bg"
         tools:visibility="visible" />
 
     <EditText
@@ -62,16 +64,18 @@
         android:layout_height="50dp"
         android:layout_marginStart="32dp"
         android:layout_marginLeft="32dp"
-        android:layout_marginTop="24dp"
+        android:layout_marginTop="103dp"
         android:layout_marginEnd="32dp"
         android:layout_marginRight="32dp"
         android:ems="10"
         android:inputType="textEmailAddress"
-        android:text="  Email"
+        android:background="@drawable/vie_bg"
+        android:hint="Name"
+        android:paddingLeft="20dp"
         android:visibility="visible"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView2"
+        app:layout_constraintTop_toTopOf="parent"
         tools:visibility="visible" />
 
     <Button
@@ -83,15 +87,14 @@
         android:layout_marginTop="8dp"
         android:layout_marginEnd="32dp"
         android:layout_marginRight="32dp"
+        android:background="@drawable/btn_blue"
         android:text="Login"
-        android:visibility="visible"
-        app:backgroundTint="#2196F3"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/passwordPass" />
 
     <TextView
-        android:id="@+id/textViewPasswordDimenticata"
+        android:id="@+id/textViewRecovery"
         android:layout_width="174dp"
         android:layout_height="31dp"
         android:layout_marginStart="136dp"
@@ -118,7 +121,7 @@
         android:layout_marginTop="27dp"
         android:background="?android:attr/listDivider"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textViewPasswordDimenticata" />
+        app:layout_constraintTop_toBottomOf="@+id/textViewRecovery" />
 
     <TextView
         android:id="@+id/textView3"
@@ -138,10 +141,10 @@
         app:layout_constraintEnd_toStartOf="@+id/divider2"
         app:layout_constraintHorizontal_bias="0.285"
         app:layout_constraintStart_toEndOf="@+id/divider"
-        app:layout_constraintTop_toBottomOf="@+id/textViewPasswordDimenticata" />
+        app:layout_constraintTop_toBottomOf="@+id/textViewRecovery" />
 
     <Button
-        android:id="@+id/button2"
+        android:id="@+id/buttonLoginFB"
         android:layout_width="391dp"
         android:layout_height="50dp"
         android:layout_marginStart="32dp"
@@ -158,7 +161,7 @@
         app:layout_constraintTop_toBottomOf="@+id/textView3" />
 
     <Button
-        android:id="@+id/button3"
+        android:id="@+id/buttonLoginGG"
         android:layout_width="391dp"
         android:layout_height="50dp"
         android:layout_marginStart="32dp"
@@ -170,7 +173,7 @@
         app:backgroundTint="#E11414"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button2" />
+        app:layout_constraintTop_toBottomOf="@+id/buttonLoginFB" />
 
     <TextView
         android:id="@+id/textView"
@@ -183,12 +186,12 @@
         android:text="Don't have an account?"
         android:textColor="#070707"
         android:visibility="visible"
-        app:layout_constraintEnd_toStartOf="@+id/textView2"
+        app:layout_constraintEnd_toStartOf="@+id/textViewSignUp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button3" />
+        app:layout_constraintTop_toBottomOf="@+id/buttonLoginGG" />
 
     <TextView
-        android:id="@+id/textView2"
+        android:id="@+id/textViewSignUp"
         android:layout_width="50dp"
         android:layout_height="18dp"
         android:layout_marginEnd="111dp"
@@ -198,6 +201,6 @@
         android:visibility="visible"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/textView"
-        app:layout_constraintTop_toBottomOf="@+id/button3" />
+        app:layout_constraintTop_toBottomOf="@+id/buttonLoginGG" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
