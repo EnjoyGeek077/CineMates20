@@ -1,9 +1,12 @@
-package com.example.ingsw_cinemates20;
+package com.example.ingsw_cinemates20.login;
 
 import android.content.Context;
+
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentPagerAdapter;
+
+import com.example.ingsw_cinemates20.signup.SignUpFragment;
 
 public class LoginAdapter extends FragmentPagerAdapter {
 
@@ -27,7 +30,8 @@ public class LoginAdapter extends FragmentPagerAdapter {
                 LoginTabFragment loginTabFragment = new LoginTabFragment();
                 return loginTabFragment;
             case 1:
-                SignUpFragment signUpTabFragment = new SignUpFragment();
+                SignUpFragment signUpTabFragment;
+                signUpTabFragment = new SignUpFragment();
                 return signUpTabFragment;
             default:
                 return null;

@@ -1,10 +1,4 @@
-package com.example.ingsw_cinemates20;
-
-import java.text.DateFormat;
-import java.text.ParseException;
-import java.util.Date;
-import java.util.Locale;
-import java.util.Scanner;
+package com.example.ingsw_cinemates20.entity;
 
 public class Utente {
 
@@ -68,8 +62,7 @@ public class Utente {
         Password = password;
     }
 
-    /* Il seguente codice permette di inserire una data e stamparla in un altro formato!!!
-
+    /*
        String s;
         Date d= null;
         System.out.println("Inserisci la data nel formato [gg/mm/yyyy]: ");
@@ -83,6 +76,6 @@ public class Utente {
             System.out.println("Formato inserito errato");
         }
         System.out.println(d);
-*/
+    */
 
 }
