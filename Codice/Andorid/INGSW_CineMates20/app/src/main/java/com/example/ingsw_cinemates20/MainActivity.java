@@ -31,7 +31,7 @@ public class MainActivity extends AppCompatActivity {
         tabLayout.setTabGravity(tabLayout.GRAVITY_FILL);
 
         // getTabCount() fa crashare il programma!
-        final LoginAdapter adapter = new LoginAdapter(getSupportFragmentManager(),this, tabLayout.getTabCount());
+       final LoginAdapter adapter = new LoginAdapter(getSupportFragmentManager(),this, tabLayout.getTabCount());
         viewPager.setAdapter(adapter);
 
         viewPager.addOnPageChangeListener(new TabLayout.TabLayoutOnPageChangeListener(tabLayout));
