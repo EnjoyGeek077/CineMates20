@@ -1,9 +1,10 @@
 package com.example.ingsw_cinemates20;
 
 import android.os.Bundle;
-import android.view.Window;
+import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
 import com.google.android.material.tabs.TabLayout;
@@ -20,6 +21,13 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.login);
 
+
+        TextView signup = (TextView) findViewById(R.id.textViewSignUp);
+        signup.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View view) {
+                setContentView(R.layout.registrazione);
+            }});
 
     }
 
