@@ -1524,9 +1524,9 @@
 							"_parent": {
 								"$ref": "AAAAAAF4zCMWrOqTuyk="
 							},
-							"name": "plainTextNome",
+							"name": "textNome",
 							"visibility": "private",
-							"type": "PlainText"
+							"type": "EditText"
 						},
 						{
 							"_type": "UMLAttribute",
@@ -1534,9 +1534,9 @@
 							"_parent": {
 								"$ref": "AAAAAAF4zCMWrOqTuyk="
 							},
-							"name": "plainTextCognome",
+							"name": "textCognome",
 							"visibility": "private",
-							"type": "PlainText"
+							"type": "EditText"
 						},
 						{
 							"_type": "UMLAttribute",
@@ -1544,9 +1544,9 @@
 							"_parent": {
 								"$ref": "AAAAAAF4zCMWrOqTuyk="
 							},
-							"name": "postalAddressEmail",
+							"name": "textEmail",
 							"visibility": "private",
-							"type": "PostalAddress"
+							"type": "EditText"
 						},
 						{
 							"_type": "UMLAttribute",
@@ -1564,9 +1564,9 @@
 							"_parent": {
 								"$ref": "AAAAAAF4zCMWrOqTuyk="
 							},
-							"name": "plainTextTelefono",
+							"name": "textTelefono",
 							"visibility": "private",
-							"type": "PlainText"
+							"type": "EditText"
 						},
 						{
 							"_type": "UMLAttribute",
@@ -1574,9 +1574,9 @@
 							"_parent": {
 								"$ref": "AAAAAAF4zCMWrOqTuyk="
 							},
-							"name": "plainTextCittà",
+							"name": "textCittà",
 							"visibility": "private",
-							"type": "PlainText"
+							"type": "EditText"
 						},
 						{
 							"_type": "UMLAttribute",
@@ -1584,9 +1584,9 @@
 							"_parent": {
 								"$ref": "AAAAAAF4zCMWrOqTuyk="
 							},
-							"name": "passwordPass",
+							"name": "textPass",
 							"visibility": "private",
-							"type": "Password"
+							"type": "EditText"
 						},
 						{
 							"_type": "UMLAttribute",
@@ -1594,9 +1594,9 @@
 							"_parent": {
 								"$ref": "AAAAAAF4zCMWrOqTuyk="
 							},
-							"name": "passwordConfPass",
+							"name": "textConfPass",
 							"visibility": "private",
-							"type": "Password"
+							"type": "EditText"
 						},
 						{
 							"_type": "UMLAttribute",
@@ -2648,7 +2648,7 @@
 											"top": 83,
 											"width": 213.87158203125,
 											"height": 13,
-											"text": "-postalAddressEmail: PostalAddress",
+											"text": "-textEmail: EditText",
 											"horizontalAlignment": 0
 										},
 										{
@@ -2665,7 +2665,7 @@
 											"top": 98,
 											"width": 213.87158203125,
 											"height": 13,
-											"text": "-passwordPass: Password",
+											"text": "-textPass: EditText",
 											"horizontalAlignment": 0
 										},
 										{
@@ -3051,7 +3051,7 @@
 											"top": 91,
 											"width": 213.87158203125,
 											"height": 13,
-											"text": "-plainTextNome: PlainText",
+											"text": "-textNome: EditText",
 											"horizontalAlignment": 0
 										},
 										{
@@ -3068,7 +3068,7 @@
 											"top": 106,
 											"width": 213.87158203125,
 											"height": 13,
-											"text": "-plainTextCognome: PlainText",
+											"text": "-textCognome: EditText",
 											"horizontalAlignment": 0
 										},
 										{
@@ -3085,7 +3085,7 @@
 											"top": 121,
 											"width": 213.87158203125,
 											"height": 13,
-											"text": "-postalAddressEmail: PostalAddress",
+											"text": "-textEmail: EditText",
 											"horizontalAlignment": 0
 										},
 										{
@@ -3119,7 +3119,7 @@
 											"top": 151,
 											"width": 213.87158203125,
 											"height": 13,
-											"text": "-plainTextTelefono: PlainText",
+											"text": "-textTelefono: EditText",
 											"horizontalAlignment": 0
 										},
 										{
@@ -3136,7 +3136,7 @@
 											"top": 166,
 											"width": 213.87158203125,
 											"height": 13,
-											"text": "-plainTextCittà: PlainText",
+											"text": "-textCittà: EditText",
 											"horizontalAlignment": 0
 										},
 										{
@@ -3153,7 +3153,7 @@
 											"top": 181,
 											"width": 213.87158203125,
 											"height": 13,
-											"text": "-passwordPass: Password",
+											"text": "-textPass: EditText",
 											"horizontalAlignment": 0
 										},
 										{
@@ -3170,7 +3170,7 @@
 											"top": 196,
 											"width": 213.87158203125,
 											"height": 13,
-											"text": "-passwordConfPass: Password",
+											"text": "-textConfPass: EditText",
 											"horizontalAlignment": 0
 										},
 										{
@@ -3419,7 +3419,7 @@
 											"top": 211,
 											"width": 236.2724609375,
 											"height": 13,
-											"text": "-postalAddressRecovery: Postal Address",
+											"text": "-textRecovery: EditText",
 											"horizontalAlignment": 0
 										},
 										{
@@ -5619,7 +5619,7 @@
 											"top": 83,
 											"width": 210.259765625,
 											"height": 13,
-											"text": "-plainTextNome: PlainText",
+											"text": "-textNome: EditText",
 											"horizontalAlignment": 0
 										},
 										{
@@ -5636,7 +5636,7 @@
 											"top": 98,
 											"width": 210.259765625,
 											"height": 13,
-											"text": "-plainTextCognome: PlainText",
+											"text": "-textCognome: EditText",
 											"horizontalAlignment": 0
 										},
 										{
@@ -5653,7 +5653,7 @@
 											"top": 113,
 											"width": 210.259765625,
 											"height": 13,
-											"text": "-postalAddressEmail: PostalAddress",
+											"text": "-textEmail: EditText",
 											"horizontalAlignment": 0
 										},
 										{
@@ -5687,7 +5687,7 @@
 											"top": 143,
 											"width": 210.259765625,
 											"height": 13,
-											"text": "-plainTextTelefono: PlainText",
+											"text": "-textTelefono: EditText",
 											"horizontalAlignment": 0
 										},
 										{
@@ -5704,7 +5704,7 @@
 											"top": 158,
 											"width": 210.259765625,
 											"height": 13,
-											"text": "-plainTextCittà: PlainText",
+											"text": "-textCittà: EditText",
 											"horizontalAlignment": 0
 										},
 										{
@@ -5721,7 +5721,7 @@
 											"top": 173,
 											"width": 210.259765625,
 											"height": 13,
-											"text": "-passwordPass: Password",
+											"text": "-textPass: EditText",
 											"horizontalAlignment": 0
 										},
 										{
@@ -5738,7 +5738,7 @@
 											"top": 188,
 											"width": 210.259765625,
 											"height": 13,
-											"text": "-passwordConfPass: Password",
+											"text": "-textConfPass: EditText",
 											"horizontalAlignment": 0
 										},
 										{
@@ -12337,9 +12337,9 @@
 							"_parent": {
 								"$ref": "AAAAAAF40Nn3Mo40SbY="
 							},
-							"name": "postalAddressEmail",
+							"name": "textEmail",
 							"visibility": "private",
-							"type": "PostalAddress"
+							"type": "EditText"
 						},
 						{
 							"_type": "UMLAttribute",
@@ -12347,9 +12347,9 @@
 							"_parent": {
 								"$ref": "AAAAAAF40Nn3Mo40SbY="
 							},
-							"name": "passwordPass",
+							"name": "textPass",
 							"visibility": "private",
-							"type": "Password"
+							"type": "EditText"
 						},
 						{
 							"_type": "UMLAttribute",
@@ -12499,9 +12499,9 @@
 							"_parent": {
 								"$ref": "AAAAAAF40PGLW49r30M="
 							},
-							"name": "postalAddressRecovery",
+							"name": "textRecovery",
 							"visibility": "private",
-							"type": "Postal Address"
+							"type": "EditText"
 						},
 						{
 							"_type": "UMLAttribute",
@@ -28506,7 +28506,7 @@
 											"top": 153,
 											"width": 174.484375,
 											"height": 13,
-											"text": "-plainTextCertificate: PlainText",
+											"text": "-textCertificate: EditText",
 											"horizontalAlignment": 0
 										},
 										{
@@ -28523,7 +28523,7 @@
 											"top": 168,
 											"width": 174.484375,
 											"height": 13,
-											"text": "-plainTextActor: PlainText",
+											"text": "-textActor: EditText",
 											"horizontalAlignment": 0
 										},
 										{
@@ -28540,7 +28540,7 @@
 											"top": 183,
 											"width": 174.484375,
 											"height": 13,
-											"text": "-plainTextDirector: PlainText",
+											"text": "-textDirector: EditText",
 											"horizontalAlignment": 0
 										},
 										{
@@ -28557,7 +28557,7 @@
 											"top": 198,
 											"width": 174.484375,
 											"height": 13,
-											"text": "-plainTextYear: PlainText",
+											"text": "-textYear: EditText",
 											"horizontalAlignment": 0
 										},
 										{
@@ -28823,7 +28823,7 @@
 											"top": 195,
 											"width": 180.99072265625,
 											"height": 13,
-											"text": "-plainTextTitolo: PlainText",
+											"text": "-textTitolo: EditText",
 											"horizontalAlignment": 0
 										},
 										{
@@ -28840,7 +28840,7 @@
 											"top": 210,
 											"width": 180.99072265625,
 											"height": 13,
-											"text": "-plainTextDescription; PlainText",
+											"text": "-textDescription; EditText",
 											"horizontalAlignment": 0
 										},
 										{
@@ -33524,9 +33524,9 @@
 							"_parent": {
 								"$ref": "AAAAAAF419o8eVqGP6I="
 							},
-							"name": "plainTextCertificate",
+							"name": "textCertificate",
 							"visibility": "private",
-							"type": "PlainText"
+							"type": "EditText"
 						},
 						{
 							"_type": "UMLAttribute",
@@ -33534,9 +33534,9 @@
 							"_parent": {
 								"$ref": "AAAAAAF419o8eVqGP6I="
 							},
-							"name": "plainTextActor",
+							"name": "textActor",
 							"visibility": "private",
-							"type": "PlainText"
+							"type": "EditText"
 						},
 						{
 							"_type": "UMLAttribute",
@@ -33544,9 +33544,9 @@
 							"_parent": {
 								"$ref": "AAAAAAF419o8eVqGP6I="
 							},
-							"name": "plainTextDirector",
+							"name": "textDirector",
 							"visibility": "private",
-							"type": "PlainText"
+							"type": "EditText"
 						},
 						{
 							"_type": "UMLAttribute",
@@ -33554,9 +33554,9 @@
 							"_parent": {
 								"$ref": "AAAAAAF419o8eVqGP6I="
 							},
-							"name": "plainTextYear",
+							"name": "textYear",
 							"visibility": "private",
-							"type": "PlainText"
+							"type": "EditText"
 						},
 						{
 							"_type": "UMLAttribute",
@@ -33613,9 +33613,9 @@
 							"_parent": {
 								"$ref": "AAAAAAF41+INJFvKlSg="
 							},
-							"name": "plainTextTitolo",
+							"name": "textTitolo",
 							"visibility": "private",
-							"type": "PlainText"
+							"type": "EditText"
 						},
 						{
 							"_type": "UMLAttribute",
@@ -33623,9 +33623,8 @@
 							"_parent": {
 								"$ref": "AAAAAAF41+INJFvKlSg="
 							},
-							"name": "plainTextDescription; PlainText",
-							"visibility": "private",
-							"type": ""
+							"name": "textDescription; EditText",
+							"visibility": "private"
 						},
 						{
 							"_type": "UMLAttribute",
@@ -35174,9 +35173,9 @@
 							"_parent": {
 								"$ref": "AAAAAAF42igDJWq2t1Q="
 							},
-							"name": "plainTextDescrizione",
+							"name": "textDescrizione",
 							"visibility": "private",
-							"type": "PlainText"
+							"type": "EditText"
 						},
 						{
 							"_type": "UMLAttribute",
@@ -35184,9 +35183,9 @@
 							"_parent": {
 								"$ref": "AAAAAAF42igDJWq2t1Q="
 							},
-							"name": "plainTextNome",
+							"name": "textNome",
 							"visibility": "private",
-							"type": "PlainText"
+							"type": "EditText"
 						},
 						{
 							"_type": "UMLAttribute",
@@ -35194,9 +35193,9 @@
 							"_parent": {
 								"$ref": "AAAAAAF42igDJWq2t1Q="
 							},
-							"name": "plainTextCognome",
+							"name": "textCognome",
 							"visibility": "private",
-							"type": "PlainText"
+							"type": "EditText"
 						},
 						{
 							"_type": "UMLAttribute",
@@ -35204,9 +35203,9 @@
 							"_parent": {
 								"$ref": "AAAAAAF42igDJWq2t1Q="
 							},
-							"name": "passwordPassword",
+							"name": "textPassword",
 							"visibility": "private",
-							"type": "Password"
+							"type": "EditText"
 						},
 						{
 							"_type": "UMLAttribute",
@@ -35214,9 +35213,9 @@
 							"_parent": {
 								"$ref": "AAAAAAF42igDJWq2t1Q="
 							},
-							"name": "passwordConfPassword",
+							"name": "textConfPassword",
 							"visibility": "private",
-							"type": "Password"
+							"type": "EditText"
 						}
 					],
 					"operations": [
@@ -35694,7 +35693,7 @@
 											"top": 99,
 											"width": 295,
 											"height": 13,
-											"text": "-plainTextTitolo: PlainText",
+											"text": "-textTitolo: EditText",
 											"horizontalAlignment": 0
 										},
 										{
@@ -35711,7 +35710,7 @@
 											"top": 114,
 											"width": 295,
 											"height": 13,
-											"text": "-plainTextRegista: PlainText",
+											"text": "-textRegista: EditText",
 											"horizontalAlignment": 0
 										},
 										{
@@ -35728,7 +35727,7 @@
 											"top": 129,
 											"width": 295,
 											"height": 13,
-											"text": "-plainTextTesto: PlainText",
+											"text": "-textTesto: EditText",
 											"horizontalAlignment": 0
 										},
 										{
@@ -35745,7 +35744,7 @@
 											"top": 144,
 											"width": 295,
 											"height": 13,
-											"text": "-plainTextFeed: PlainText",
+											"text": "-textFeed: EditText",
 											"horizontalAlignment": 0
 										},
 										{
@@ -39084,9 +39083,9 @@
 							"_parent": {
 								"$ref": "AAAAAAF42mv/d6V/beg="
 							},
-							"name": "plainTextTitolo",
+							"name": "textTitolo",
 							"visibility": "private",
-							"type": "PlainText"
+							"type": "EditText"
 						},
 						{
 							"_type": "UMLAttribute",
@@ -39094,9 +39093,9 @@
 							"_parent": {
 								"$ref": "AAAAAAF42mv/d6V/beg="
 							},
-							"name": "plainTextRegista",
+							"name": "textRegista",
 							"visibility": "private",
-							"type": "PlainText"
+							"type": "EditText"
 						},
 						{
 							"_type": "UMLAttribute",
@@ -39104,9 +39103,9 @@
 							"_parent": {
 								"$ref": "AAAAAAF42mv/d6V/beg="
 							},
-							"name": "plainTextTesto",
+							"name": "textTesto",
 							"visibility": "private",
-							"type": "PlainText"
+							"type": "EditText"
 						},
 						{
 							"_type": "UMLAttribute",
@@ -39114,9 +39113,9 @@
 							"_parent": {
 								"$ref": "AAAAAAF42mv/d6V/beg="
 							},
-							"name": "plainTextFeed",
+							"name": "textFeed",
 							"visibility": "private",
-							"type": "PlainText"
+							"type": "EditText"
 						},
 						{
 							"_type": "UMLAttribute",
@@ -48634,7 +48633,7 @@
 											"top": 143,
 											"width": 279,
 											"height": 13,
-											"text": "-plainTextDescrizione: PlainText",
+											"text": "-textDescrizione: EditText",
 											"horizontalAlignment": 0
 										},
 										{
@@ -48651,7 +48650,7 @@
 											"top": 158,
 											"width": 279,
 											"height": 13,
-											"text": "-plainTextNome: PlainText",
+											"text": "-textNome: EditText",
 											"horizontalAlignment": 0
 										},
 										{
@@ -48668,7 +48667,7 @@
 											"top": 173,
 											"width": 279,
 											"height": 13,
-											"text": "-plainTextCognome: PlainText",
+											"text": "-textCognome: EditText",
 											"horizontalAlignment": 0
 										},
 										{
@@ -48685,7 +48684,7 @@
 											"top": 188,
 											"width": 279,
 											"height": 13,
-											"text": "-passwordPassword: Password",
+											"text": "-textPassword: EditText",
 											"horizontalAlignment": 0
 										},
 										{
@@ -48702,7 +48701,7 @@
 											"top": 203,
 											"width": 279,
 											"height": 13,
-											"text": "-passwordConfPassword: Password",
+											"text": "-textConfPassword: EditText",
 											"horizontalAlignment": 0
 										}
 									],
