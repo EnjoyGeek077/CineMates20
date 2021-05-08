@@ -7,12 +7,13 @@ import android.widget.EditText;
 import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
+
 import com.google.android.material.tabs.TabLayout;
 
 public class MainActivity extends AppCompatActivity {
 
+    EditText postalAddressEmail, passwordPass, textViewRecovery, textViewSignUp;
     TabLayout panel;
-    EditText postalAddressEmail, passwordPass, textViewRecovery, textViewSignUp, textView;
     Button buttonLogin, buttonLoginFB, buttonLoginGG;
 
 
