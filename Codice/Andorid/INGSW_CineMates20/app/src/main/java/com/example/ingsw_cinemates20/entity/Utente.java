@@ -2,8 +2,40 @@ package com.example.ingsw_cinemates20.entity;
 
 public class Utente {
 
-    String Email, Password, Nome, Cognome, Telefono, Citta;
+    String Email, Password, Nome, Cognome, Telefono, City;
     int NumLike;
+
+    public Utente() {}
+
+    public Utente(String email, String password,
+                  String nome, String cognome,
+                  String telefono, String città) {
+
+        this.setEmail(email);
+        this.setPassword(password);
+        this.setNome(nome);
+        this.setCognome(cognome);
+
+        if(telefono.isEmpty()){
+            this.setTelefono("None");
+        }else{
+            this.setTelefono(telefono);
+        }
+
+        if(telefono.isEmpty()){
+            this.setCity("None");
+        }else{
+            this.setCity(città);
+        }
+
+        this.NumLike = 0;
+
+    }
+
+
+
+
+
 
 
     public String getEmail() {
@@ -38,12 +70,12 @@ public class Utente {
         Telefono = telefono;
     }
 
-    public String getCitta() {
-        return Citta;
+    public String getCity() {
+        return City;
     }
 
-    public void setCitta(String citta) {
-        Citta = citta;
+    public void setCity(String city) {
+        City = city;
     }
 
     public int getNumLike() {

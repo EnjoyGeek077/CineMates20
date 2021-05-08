@@ -8,7 +8,7 @@
     android:background="@drawable/sfondo_reg">
 
     <TextView
-        android:id="@+id/textView2"
+        android:id="@+id/textViewCreate"
         android:layout_width="194dp"
         android:layout_height="70dp"
         android:layout_marginTop="44dp"
@@ -35,7 +35,7 @@
         android:visibility="visible"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/textView2"
+        app:layout_constraintTop_toTopOf="@+id/textViewCreate"
         tools:visibility="visible" />
 
     <EditText
@@ -56,7 +56,7 @@
         tools:visibility="visible" />
 
     <EditText
-        android:id="@+id/Email"
+        android:id="@+id/TextEmail"
         android:layout_width="match_parent"
         android:layout_height="37dp"
         android:layout_marginLeft="25dp"
@@ -85,10 +85,10 @@
         android:ems="10"
         android:inputType="date"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/Email" />
+        app:layout_constraintTop_toBottomOf="@+id/TextEmail" />
 
     <TextView
-        android:id="@+id/textView4"
+        android:id="@+id/tectViewDate"
         android:layout_width="100dp"
         android:layout_height="22dp"
         android:layout_marginLeft="10dp"
@@ -99,7 +99,7 @@
         android:textColor="#000000"
         android:textSize="18sp"
         app:layout_constraintStart_toEndOf="@+id/birthSelector"
-        app:layout_constraintTop_toBottomOf="@+id/Email" />
+        app:layout_constraintTop_toBottomOf="@+id/TextEmail" />
 
     <EditText
         android:id="@+id/TextTelephone"
@@ -119,7 +119,7 @@
         tools:visibility="visible" />
 
     <EditText
-        android:id="@+id/TextCitta"
+        android:id="@+id/TextCity"
         android:layout_width="match_parent"
         android:layout_height="37dp"
         android:layout_marginLeft="25dp"
@@ -136,7 +136,7 @@
         tools:visibility="visible" />
 
     <TextView
-        android:id="@+id/textView5"
+        android:id="@+id/textPolicy"
         android:layout_width="match_parent"
         android:layout_height="50dp"
         android:layout_marginLeft="25dp"
@@ -152,10 +152,10 @@
         android:textColor="@color/black"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/TextCitta" />
+        app:layout_constraintTop_toBottomOf="@+id/TextCity" />
 
     <EditText
-        android:id="@+id/Password"
+        android:id="@+id/TextPassword"
         android:layout_width="match_parent"
         android:layout_height="37dp"
         android:layout_marginLeft="25dp"
@@ -168,11 +168,11 @@
         android:visibility="visible"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView5"
+        app:layout_constraintTop_toBottomOf="@+id/textPolicy"
         tools:visibility="visible" />
 
     <EditText
-        android:id="@+id/ConfPass"
+        android:id="@+id/TextConfPass"
         android:layout_width="match_parent"
         android:layout_height="37dp"
         android:layout_marginLeft="25dp"
@@ -185,7 +185,7 @@
         android:visibility="visible"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/Password"
+        app:layout_constraintTop_toBottomOf="@+id/TextPassword"
         tools:visibility="visible" />
 
     <CheckBox
@@ -196,7 +196,7 @@
         android:layout_marginTop="5dp"
         android:text=""
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/ConfPass" />
+        app:layout_constraintTop_toBottomOf="@+id/TextConfPass" />
 
     <TextView
         android:id="@+id/termini"
@@ -207,10 +207,10 @@
         android:text="Accept all terms and services"
         android:textColor="@color/black"
         app:layout_constraintStart_toEndOf="@+id/gdprAccept"
-        app:layout_constraintTop_toBottomOf="@+id/ConfPass" />
+        app:layout_constraintTop_toBottomOf="@+id/TextConfPass" />
 
     <Button
-        android:id="@+id/Confirm"
+        android:id="@+id/buttonConfirmSignin"
         android:layout_width="150dp"
         android:layout_height="45dp"
         android:layout_marginTop="45dp"
@@ -221,5 +221,8 @@
         android:textColor="#FFFFFF"
         android:textSize="18dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/termini" />" />
+        app:layout_constraintTop_toBottomOf="@+id/termini" /><![CDATA[
+
+    " />
+]]>
 </androidx.constraintlayout.widget.ConstraintLayout>
