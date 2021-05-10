@@ -16,11 +16,9 @@ import com.google.android.gms.auth.api.signin.GoogleSignInOptions;
 import com.google.firebase.auth.FirebaseAuth;
 
 public class LoginController extends AppCompatActivity {
-    private EditText postalAddressEmail;
-    private EditText passwordPass;
+    private EditText postalAddressEmail, passwordPass;
 
-    private TextView textViewRecovery;
-    private TextView textViewSignUp;
+    private TextView textViewRecovery, textViewSignUp;
 
     private Button buttonFB, buttonGG, buttonLogin;
     private ProgressBar progressBar;
@@ -48,8 +46,8 @@ public class LoginController extends AppCompatActivity {
 
         //progressBar = (ProgressBar) findViewById(R.id.progressBar));
 
-         setupFB();
-         setupGG();
+        setupFB();
+        setupGG();
     }
 
 
@@ -61,24 +59,24 @@ public class LoginController extends AppCompatActivity {
         callbackManager = CallbackManager.Factory.create();
 
         //buttonFB.setReadPermissions(Arrays.asList("email","public_profile"));
-/*
-        buttonLogin.registerCallback(callbackManager, new FacebookCallback<LoginResult>() {
-            @Override
-            public void onSuccess(LoginResult loginResult) {
-                // App code
-            }
+//
+//        buttonLogin.registerCallback(callbackManager, new FacebookCallback<LoginResult>() {
+//            @Override
+//            public void onSuccess(LoginResult loginResult) {
+//                // App code
+//            }
+//
+//            @Override
+//            public void onCancel() {
+//                // App code
+//            }
+//
+//            @Override
+//            public void onError(FacebookException exception) {
+        // App code
+//            }
+//        });
 
-            @Override
-            public void onCancel() {
-                // App code
-            }
-
-            @Override
-            public void onError(FacebookException exception) {
-                // App code
-            }
-        });
-*/
 
         //Continua sulla doc:
         //https://developers.facebook.com/docs/facebook-login/android/
@@ -98,5 +96,4 @@ public class LoginController extends AppCompatActivity {
         //https://developers.google.com/identity/sign-in/android/sign-in
 
     }
-
 }

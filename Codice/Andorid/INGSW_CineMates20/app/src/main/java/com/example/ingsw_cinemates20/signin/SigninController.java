@@ -28,15 +28,14 @@ public class SigninController extends AppCompatActivity {
     private EditText name, surname, email, pass, confPass, city, telephone;
     private CheckBox gdpr;
     private Calendar date;
-
     private ProgressBar progressBar;
     private Button buttonSignin;
-
     private FirebaseAuth mAuth;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        setContentView(R.layout.registrazione);
 
         mAuth = FirebaseAuth.getInstance();
 
@@ -62,6 +61,8 @@ public class SigninController extends AppCompatActivity {
 
 
     private void registerUser() {
+
+
         String nameText = name.getText().toString().trim();
         String surnameText = surname.getText().toString().trim();
         //String dateText = getDate();
