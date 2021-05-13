@@ -48,6 +48,8 @@ public class LoginController extends AppCompatActivity {
 
         setupFB();
         setupGG();
+
+
     }
 
 

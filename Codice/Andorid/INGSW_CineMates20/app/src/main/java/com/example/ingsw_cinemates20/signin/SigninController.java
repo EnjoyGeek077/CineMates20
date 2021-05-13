@@ -7,6 +7,7 @@ import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.EditText;
 import android.widget.ProgressBar;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
@@ -55,8 +56,17 @@ public class SigninController extends AppCompatActivity {
         buttonSignin.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                caricamento();
                 registerUser();
             }});
+    }
+
+    private void caricamento(){
+        TextView x = (TextView) findViewById(R.id.textCm24);
+        x.setVisibility(View.VISIBLE);
+
+        ProgressBar pbar = (ProgressBar) findViewById(R.id.progressBar);
+        pbar.setVisibility(View.VISIBLE);
     }
 
 
