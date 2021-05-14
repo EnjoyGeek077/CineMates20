@@ -94,20 +94,4 @@ public class Utente {
         Password = password;
     }
 
-    /*
-       String s;
-        Date d= null;
-        System.out.println("Inserisci la data nel formato [gg/mm/yyyy]: ");
-        Scanner in= new Scanner(System.in);
-        s = in.nextLine();
-        try{
-            DateFormat formatDate = DateFormat.getDateInstance(DateFormat.SHORT, Locale.IT);
-            formatDate.setLenient(false); // la conversione deve essere rigorosa
-            d = formatDate.parse(s);
-        } catch (ParseException e) {
-            System.out.println("Formato inserito errato");
-        }
-        System.out.println(d);
-    */
-
 }
