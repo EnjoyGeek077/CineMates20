@@ -6,24 +6,21 @@ import android.util.Patterns;
 import android.view.View;
 import android.widget.Button;
 import android.widget.CheckBox;
-import android.widget.DatePicker;
 import android.widget.EditText;
 import android.widget.ProgressBar;
 import android.widget.Toast;
 
-import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.ingsw_cinemates20.R;
 import com.example.ingsw_cinemates20.entity.Utente;
-import com.google.android.gms.tasks.OnCompleteListener;
-import com.google.android.gms.tasks.Task;
-import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
+import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 
 import java.util.Calendar;
+import java.util.Objects;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
@@ -31,11 +28,13 @@ public class SigninActivity extends AppCompatActivity {
     private EditText name, surname, dateBirth, email, pass, confPass, city, telephone;
     private CheckBox gdpr;
     private ProgressBar progressBar;
-    private Button buttonSignin;
 
     DatePickerDialog.OnDateSetListener setListener;
 
-    private FirebaseAuth mAuth;
+    FirebaseDatabase database;
+    DatabaseReference myRef;
+
+    FirebaseAuth mAuth;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -49,48 +48,35 @@ public class SigninActivity extends AppCompatActivity {
 
         mAuth = FirebaseAuth.getInstance();
 
-        name = (EditText) findViewById(R.id.TextName);
-        surname = (EditText) findViewById(R.id.TextCognome);
-        dateBirth = (EditText) findViewById((R.id.birthSelector));
-        email = (EditText) findViewById(R.id.TextEmail);
-        pass = (EditText) findViewById(R.id.TextPassword);
-        confPass = (EditText) findViewById(R.id.TextConfPass);
-        city = (EditText) findViewById(R.id.TextCity);
-        telephone = (EditText) findViewById(R.id.TextTelephone);
+        name = findViewById(R.id.TextName);
+        surname = findViewById(R.id.TextCognome);
+        dateBirth = findViewById((R.id.birthSelector));
+        email = findViewById(R.id.TextEmail);
+        pass = findViewById(R.id.TextPassword);
+        confPass = findViewById(R.id.TextConfPass);
+        city = findViewById(R.id.TextCity);
+        telephone = findViewById(R.id.TextTelephone);
 
-        gdpr = (CheckBox) findViewById(R.id.gdprAccept);
-        progressBar = (ProgressBar) findViewById(R.id.progressBar);
+        gdpr = findViewById(R.id.gdprAccept);
+        progressBar = findViewById(R.id.progressBar);
 
-        buttonSignin = (Button) findViewById(R.id.buttonConfirmSignin);
-        buttonSignin.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                registerUser();
-            }});
+        Button buttonSignin = findViewById(R.id.buttonConfirmSignin);
+        buttonSignin.setOnClickListener(v -> registerUser());
 
-        setListener = new DatePickerDialog.OnDateSetListener() {
-            @Override
-            public void onDateSet(DatePicker view, int year, int month, int day) {
-                month = month+1;
-                String date = day+"/"+month+"/"+year;
-                dateBirth.setText(date);
-            }
+        setListener = (view, year12, month12, day12) -> {
+            month12 = month12 +1;
+            String date = day12 +"/"+ month12 +"/"+ year12;
+            dateBirth.setText(date);
         };
 
-        dateBirth.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void  onClick(View v) {
-                DatePickerDialog datePickerDialog = new DatePickerDialog(
-                        SigninActivity.this, new DatePickerDialog.OnDateSetListener() {
-                    @Override
-                    public void onDateSet(DatePicker view, int year, int month, int day) {
-                        month = month+1;
-                        String date = day+"/"+month+"/"+year;
+        dateBirth.setOnClickListener(v -> {
+            DatePickerDialog datePickerDialog = new DatePickerDialog(
+                    SigninActivity.this, (view, year1, month1, day1) -> {
+                        month1 = month1 +1;
+                        String date = day1 +"/"+ month1 +"/"+ year1;
                         dateBirth.setText(date);
-                    }
-                },year,month,day);
-                datePickerDialog.show();
-            }
+                    },year,month,day);
+            datePickerDialog.show();
         });
     }
 
@@ -98,7 +84,7 @@ public class SigninActivity extends AppCompatActivity {
 
         String nameText = name.getText().toString().trim();
         String surnameText = surname.getText().toString().trim();
-        String dateText = dateBirth.getText().toString().trim();;
+        String dateText = dateBirth.getText().toString().trim();
         String emailText = email.getText().toString().trim();
         String passwordText = pass.getText().toString().trim();
         String confPasswordText = confPass.getText().toString().trim();
@@ -175,8 +161,8 @@ public class SigninActivity extends AppCompatActivity {
                 telephoneText,cityText);
 
         progressBar.setVisibility((View.VISIBLE));
+
         sendData(usr);
-        sendVerification(usr.getEmail());
 
     }
 
@@ -197,33 +183,27 @@ public class SigninActivity extends AppCompatActivity {
     // }
 
     private boolean verificaEmail(String email) {
-        if(Patterns.EMAIL_ADDRESS.matcher(email).matches())
-            return true;
-        else
-            return  false;
+        return Patterns.EMAIL_ADDRESS.matcher(email).matches();
     }
 
     private boolean verificaPass(String password) {
         Pattern path = Pattern.compile("((?=.*\\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[@#$%]).{8,15})");
         Matcher m = path.matcher(password);
-        boolean controllo = m.matches();
-        return controllo;
+        return m.matches();
     }
 
-    private void sendVerification(String email) {
+    private void sendVerification() {
         findViewById(R.id.buttonConfirmSignin).setEnabled(false);
 
         final FirebaseUser user = mAuth.getCurrentUser();
+        assert user != null;
         user.sendEmailVerification()
-                .addOnCompleteListener(this, new OnCompleteListener() {
-                    @Override
-                    public void onComplete(@NonNull Task task) {
-                        findViewById(R.id.buttonConfirmSignin).setEnabled(true);
-                        if (task.isSuccessful()) {
-                            Toast.makeText(getApplicationContext(), "Verification email inviata a " + user.getEmail(), Toast.LENGTH_SHORT).show();
-                        } else {
-                            Toast.makeText(getApplicationContext(), "Errore nell'invio della verification email.", Toast.LENGTH_SHORT).show();
-                        }
+                .addOnCompleteListener(this, task -> {
+                    findViewById(R.id.buttonConfirmSignin).setEnabled(true);
+                    if (task.isSuccessful()) {
+                        Toast.makeText(getApplicationContext(), "Verification email inviata a " + user.getEmail(), Toast.LENGTH_SHORT).show();
+                    } else {
+                        Toast.makeText(getApplicationContext(), "Errore nell'invio della verification email.", Toast.LENGTH_SHORT).show();
                     }
                 });
 
@@ -231,36 +211,29 @@ public class SigninActivity extends AppCompatActivity {
 
     private void sendData(Utente user) {
 
-        FirebaseDatabase mDB = FirebaseDatabase.getInstance();
-        mAuth.createUserWithEmailAndPassword(user.getEmail(),user.getPassword())
-                .addOnCompleteListener(new OnCompleteListener<AuthResult>() {
-                    @Override
-                    public void onComplete(@NonNull Task<AuthResult> task) {
-                        if(task.isSuccessful()){
-                            FirebaseDatabase.getInstance().getReference("Utenti")
-                                    .child(FirebaseAuth.getInstance().getCurrentUser().getUid())
-                                    .setValue(user).addOnCompleteListener(new OnCompleteListener<Void>() {
-                                @Override
-                                public void onComplete(@NonNull Task<Void> task) {
-                                    if(task.isSuccessful()) {
+        mAuth.createUserWithEmailAndPassword(user.getEmail().trim(),user.getPassword().trim())
+                .addOnCompleteListener(task -> {
+                    if(task.isSuccessful()){
+                        FirebaseDatabase.getInstance().getReference("Users")
+                                .child(Objects.requireNonNull(FirebaseAuth.getInstance().getCurrentUser()).getUid())
+                                .setValue(user).addOnCompleteListener(taskDB -> {
+                                    if(taskDB.isSuccessful()) {
                                         Toast.makeText(SigninActivity.this,
                                                 "Utente registrato con successo.",
                                                 Toast.LENGTH_LONG).show();
-                                        progressBar.setVisibility((View.GONE));
+                                        //sendVerification();
                                     }else{
                                         Toast.makeText(SigninActivity.this,
                                                 "Errore durante la registrazione dell'utente.",
                                                 Toast.LENGTH_LONG).show();
-                                        progressBar.setVisibility((View.GONE));
                                     }
-                                }
-                            });
-                        }else{
-                            Toast.makeText(SigninActivity.this,
-                                    "Registrazione fallita.",
-                                    Toast.LENGTH_LONG).show();
                             progressBar.setVisibility((View.GONE));
-                        }
+                        });
+                    }else{
+                        Toast.makeText(SigninActivity.this,
+                                "Registrazione fallita.",
+                                Toast.LENGTH_LONG).show();
+                        progressBar.setVisibility((View.GONE));
                     }
                 });
 

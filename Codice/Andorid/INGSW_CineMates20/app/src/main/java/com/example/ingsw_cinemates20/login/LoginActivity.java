@@ -120,7 +120,7 @@ public class LoginActivity extends AppCompatActivity {
 
     private void setupFB() {
 
-        //HASH: k+2+1yCaaW4lvIlw67X11Ow3qTU=
+        //HASH: ---
 
         callbackManager = CallbackManager.Factory.create();
 

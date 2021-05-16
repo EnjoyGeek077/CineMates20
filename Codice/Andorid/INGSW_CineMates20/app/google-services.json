@@ -1,33 +1,41 @@
 {
   "project_info": {
-    "project_number": "908224025913",
-    "project_id": "cinemates20-8c94f",
-    "storage_bucket": "cinemates20-8c94f.appspot.com"
+    "project_number": "153475442623",
+    "project_id": "cinemates20-4cc3d",
+    "storage_bucket": "cinemates20-4cc3d.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:908224025913:android:594e95f99e8b66e63804e8",
+        "mobilesdk_app_id": "1:153475442623:android:c8a19981a111c3c462e30a",
         "android_client_info": {
           "package_name": "com.example.ingsw_cinemates20"
         }
       },
       "oauth_client": [
         {
-          "client_id": "908224025913-kkgd61prvajhonlpgnd2dk2852ag8hi7.apps.googleusercontent.com",
+          "client_id": "153475442623-2p65nmv97nur5soii1jp76ku542gorgv.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.ingsw_cinemates20",
+            "certificate_hash": "844bdf08cd29b6284cd89c8096d00eebef8ee111"
+          }
+        },
+        {
+          "client_id": "153475442623-8a1mjd5n5a94rbep64r1rs4n4qq4p72g.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
       "api_key": [
         {
-          "current_key": "AIzaSyA51JBW5J8QnJGQX00tq54c9SHLX3j-RmQ"
+          "current_key": "AIzaSyBFMtyTpihjKj8LulvYVl7zT70HTgKYD5w"
         }
       ],
       "services": {
         "appinvite_service": {
           "other_platform_oauth_client": [
             {
-              "client_id": "908224025913-kkgd61prvajhonlpgnd2dk2852ag8hi7.apps.googleusercontent.com",
+              "client_id": "153475442623-8a1mjd5n5a94rbep64r1rs4n4qq4p72g.apps.googleusercontent.com",
               "client_type": 3
             }
           ]
