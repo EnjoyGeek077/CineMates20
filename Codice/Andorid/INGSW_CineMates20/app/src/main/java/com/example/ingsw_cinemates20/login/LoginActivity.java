@@ -2,6 +2,9 @@ package com.example.ingsw_cinemates20.login;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.text.InputType;
+import android.text.method.HideReturnsTransformationMethod;
+import android.text.method.PasswordTransformationMethod;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
@@ -34,9 +37,9 @@ public class LoginActivity extends AppCompatActivity {
 
     private EditText postalAddressEmail, passwordPass;
     private TextView textViewRecovery, textViewSignUp;
-
-    private Button buttonFB, buttonGG, buttonLogin;
+    private Button buttonFB, buttonGG, buttonLogin, visPass;
     private ProgressBar progressBar;
+    int counter=0, r;
 
     private FirebaseAuth mAuth;
 
@@ -54,6 +57,10 @@ public class LoginActivity extends AppCompatActivity {
         textViewRecovery = (TextView) findViewById(R.id.textViewRecovery);
         textViewSignUp = (TextView) findViewById(R.id.textViewSignUp);
 
+        //
+        visPass = (Button) findViewById(R.id.eye);
+        //
+
         buttonLogin = (Button) findViewById(R.id.buttonLogin);
 
         buttonFB = (Button) findViewById(R.id.buttonLoginFB);
@@ -65,6 +72,20 @@ public class LoginActivity extends AppCompatActivity {
 
         setupFB();
         setupGG();
+
+        visPass.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                counter++;
+                r= counter %2;
+                if(r !=0 ){
+                passwordPass.setTransformationMethod(HideReturnsTransformationMethod.getInstance());
+            }else{
+                    passwordPass.setTransformationMethod(PasswordTransformationMethod.getInstance());
+                }
+                }
+        });
+
 
         textViewSignUp.setOnClickListener(new View.OnClickListener(){
             @Override

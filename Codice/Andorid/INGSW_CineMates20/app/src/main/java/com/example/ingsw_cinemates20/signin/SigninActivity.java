@@ -2,6 +2,9 @@ package com.example.ingsw_cinemates20.signin;
 
 import android.app.DatePickerDialog;
 import android.os.Bundle;
+import android.text.InputType;
+import android.text.method.HideReturnsTransformationMethod;
+import android.text.method.PasswordTransformationMethod;
 import android.util.Patterns;
 import android.view.View;
 import android.widget.Button;
@@ -19,15 +22,16 @@ import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 
-import java.util.Calendar;
 import java.util.Objects;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 public class SigninActivity extends AppCompatActivity {
-    private EditText name, surname, dateBirth, email, pass, confPass, city, telephone;
+    private EditText name, surname, email, pass, confPass, city, telephone;
     private CheckBox gdpr;
     private ProgressBar progressBar;
+    private Button vPass, visConfPass;
+    int counter=0, r;
 
     DatePickerDialog.OnDateSetListener setListener;
 
@@ -41,21 +45,18 @@ public class SigninActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.registrazione);
 
-        Calendar calendar = Calendar.getInstance();
-        final int year = calendar.get(Calendar.YEAR);
-        final int month = calendar.get(Calendar.MONTH);
-        final int day = calendar.get(Calendar.DAY_OF_MONTH);
-
         mAuth = FirebaseAuth.getInstance();
 
         name = findViewById(R.id.TextName);
         surname = findViewById(R.id.TextCognome);
-        dateBirth = findViewById((R.id.birthSelector));
         email = findViewById(R.id.TextEmail);
         pass = findViewById(R.id.TextPassword);
         confPass = findViewById(R.id.TextConfPass);
         city = findViewById(R.id.TextCity);
         telephone = findViewById(R.id.TextTelephone);
+
+        vPass = (Button) findViewById(R.id.visPass);
+        visConfPass = (Button) findViewById(R.id.visConPass);
 
         gdpr = findViewById(R.id.gdprAccept);
         progressBar = findViewById(R.id.progressBar);
@@ -63,28 +64,40 @@ public class SigninActivity extends AppCompatActivity {
         Button buttonSignin = findViewById(R.id.buttonConfirmSignin);
         buttonSignin.setOnClickListener(v -> registerUser());
 
-        setListener = (view, year12, month12, day12) -> {
-            month12 = month12 +1;
-            String date = day12 +"/"+ month12 +"/"+ year12;
-            dateBirth.setText(date);
-        };
 
-        dateBirth.setOnClickListener(v -> {
-            DatePickerDialog datePickerDialog = new DatePickerDialog(
-                    SigninActivity.this, (view, year1, month1, day1) -> {
-                        month1 = month1 +1;
-                        String date = day1 +"/"+ month1 +"/"+ year1;
-                        dateBirth.setText(date);
-                    },year,month,day);
-            datePickerDialog.show();
+
+        vPass.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                counter++;
+                r= counter %2;
+                if(r !=0 ){
+                    pass.setTransformationMethod(HideReturnsTransformationMethod.getInstance());
+                }else{
+                    pass.setTransformationMethod(PasswordTransformationMethod.getInstance());
+                }
+            }
         });
+
+        visConfPass.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                counter++;
+                r= counter %2;
+                if(r !=0 ){
+                    confPass.setTransformationMethod(HideReturnsTransformationMethod.getInstance());
+                }else{
+                    confPass.setTransformationMethod(PasswordTransformationMethod.getInstance());
+                }
+            }
+        });
+
     }
 
     private void registerUser() {
 
         String nameText = name.getText().toString().trim();
         String surnameText = surname.getText().toString().trim();
-        String dateText = dateBirth.getText().toString().trim();
         String emailText = email.getText().toString().trim();
         String passwordText = pass.getText().toString().trim();
         String confPasswordText = confPass.getText().toString().trim();
@@ -103,11 +116,6 @@ public class SigninActivity extends AppCompatActivity {
             return;
         }
 
-        if(dateText.isEmpty()) {
-            dateBirth.setError("Campo obbligatorio.");
-            dateBirth.requestFocus();
-            return;
-        }
 
         if(emailText.isEmpty()) {
             email.setError("Campo obbligatorio.");

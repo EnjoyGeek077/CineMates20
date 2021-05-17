@@ -31,6 +31,7 @@
         android:background="@drawable/vie_bg"
         android:ems="10"
         android:hint="First name"
+        android:inputType="textPersonName"
         android:paddingLeft="20dp"
         android:visibility="visible"
         app:layout_constraintEnd_toEndOf="parent"
@@ -49,6 +50,7 @@
         android:background="@drawable/vie_bg"
         android:ems="10"
         android:hint="Surname"
+        android:inputType="textPersonName"
         android:visibility="visible"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -73,33 +75,7 @@
         app:layout_constraintTop_toBottomOf="@+id/TextCognome"
         tools:visibility="visible" />
 
-    <EditText
-        android:id="@+id/birthSelector"
-        android:layout_width="200dp"
-        android:layout_height="37dp"
-        android:layout_marginLeft="25dp"
-        android:layout_marginTop="5dp"
-        android:background="@drawable/vie_bg"
-        android:hint="Date"
-        android:paddingLeft="20dp"
-        android:ems="10"
-        android:inputType="date"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/TextEmail" />
 
-    <TextView
-        android:id="@+id/tectViewDate"
-        android:layout_width="100dp"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="10dp"
-        android:layout_marginTop="11dp"
-        android:lineSpacingExtra="8sp"
-        android:text="Date of birth"
-        android:textAllCaps="false"
-        android:textColor="#000000"
-        android:textSize="18sp"
-        app:layout_constraintStart_toEndOf="@+id/birthSelector"
-        app:layout_constraintTop_toBottomOf="@+id/TextEmail" />
 
     <EditText
         android:id="@+id/TextTelephone"
@@ -112,10 +88,11 @@
         android:ems="10"
         android:hint="Telephone (Facoltaty)"
         android:paddingLeft="20dp"
+        android:inputType="phone"
         android:visibility="visible"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/birthSelector"
+        app:layout_constraintTop_toBottomOf="@+id/TextEmail"
         tools:visibility="visible" />
 
     <EditText
@@ -129,6 +106,7 @@
         android:ems="10"
         android:hint="City (Facoltaty)"
         android:paddingLeft="20dp"
+        android:inputType="text"
         android:visibility="visible"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -166,7 +144,7 @@
         android:ems="10"
         android:hint="Password"
         android:paddingLeft="20dp"
-        android:visibility="visible"
+        android:inputType="textPassword"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textPolicy"
@@ -183,7 +161,7 @@
         android:ems="10"
         android:hint="Confirm password"
         android:paddingLeft="20dp"
-        android:visibility="visible"
+        android:inputType="textPassword"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/TextPassword"
@@ -249,7 +227,38 @@
         android:visibility="invisible"
         app:layout_constraintBottom_toTopOf="@+id/buttonConfirmSignin"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/TextConfPass"/><![CDATA[
+        app:layout_constraintTop_toBottomOf="@+id/TextConfPass"/>
+
+    <Button
+        android:id="@+id/visPass"
+        android:layout_width="23dp"
+        android:layout_height="22dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginRight="16dp"
+        android:background="@drawable/icon_eye"
+        android:text=""
+        app:layout_constraintBottom_toBottomOf="@+id/TextPassword"
+        app:layout_constraintEnd_toEndOf="@+id/TextPassword"
+        app:layout_constraintTop_toTopOf="@+id/TextPassword"
+        app:layout_constraintVertical_bias="0.312" />
+
+    <Button
+        android:id="@+id/visConPass"
+
+        android:layout_width="23dp"
+        android:layout_height="22dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginRight="16dp"
+        android:background="@drawable/icon_eye"
+        android:text=""
+        app:layout_constraintBottom_toBottomOf="@+id/TextConfPass"
+        app:layout_constraintEnd_toEndOf="@+id/TextConfPass"
+        app:layout_constraintTop_toTopOf="@+id/TextConfPass"
+        app:layout_constraintVertical_bias="0.312" />
+
+    <![CDATA[
 
 
 

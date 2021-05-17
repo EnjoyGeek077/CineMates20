@@ -35,8 +35,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        tools:srcCompat="@tools:sample/backgrounds/scenic"
-        tools:visibility="visible" />
+        tools:srcCompat="@tools:sample/backgrounds/scenic" />
 
     <EditText
         android:id="@+id/passwordPass"
@@ -51,15 +50,14 @@
         android:paddingLeft="20dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/postalAddressEmail"
-        tools:visibility="visible" />
+        app:layout_constraintTop_toBottomOf="@+id/postalAddressEmail" />
 
     <EditText
         android:id="@+id/postalAddressEmail"
         android:layout_width="match_parent"
         android:layout_height="50dp"
-        android:layout_marginTop="103dp"
         android:layout_marginLeft="25dp"
+        android:layout_marginTop="103dp"
         android:layout_marginRight="25dp"
         android:background="@drawable/vie_bg"
         android:ems="10"
@@ -68,8 +66,7 @@
         android:paddingLeft="20dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        tools:visibility="visible" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <Button
         android:id="@+id/buttonLogin"
@@ -98,8 +95,7 @@
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/buttonLogin"
-        tools:visibility="visible" />
+        app:layout_constraintTop_toBottomOf="@+id/buttonLogin" />
 
     <View
         android:id="@+id/divider"
@@ -148,8 +144,8 @@
         android:id="@+id/buttonLoginGG"
         android:layout_width="match_parent"
         android:layout_height="50dp"
-        android:layout_marginTop="5dp"
         android:layout_marginLeft="25dp"
+        android:layout_marginTop="5dp"
         android:layout_marginRight="25dp"
         android:background="@drawable/btn_blue"
         android:drawableLeft="@drawable/icons8_logo_di_google_16"
@@ -187,5 +183,20 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/textView"
         app:layout_constraintTop_toBottomOf="@+id/buttonLoginGG" />
+
+    <Button
+        android:id="@+id/eye"
+
+        android:layout_width="23dp"
+        android:layout_height="22dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginRight="16dp"
+        android:background="@drawable/icon_eye"
+        android:text=""
+        app:layout_constraintBottom_toBottomOf="@+id/passwordPass"
+        app:layout_constraintEnd_toEndOf="@+id/passwordPass"
+        app:layout_constraintTop_toTopOf="@+id/passwordPass"
+        app:layout_constraintVertical_bias="0.312" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
