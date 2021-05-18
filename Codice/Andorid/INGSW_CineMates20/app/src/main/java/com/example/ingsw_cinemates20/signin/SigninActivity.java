@@ -7,21 +7,21 @@ import android.text.method.HideReturnsTransformationMethod;
 import android.text.method.PasswordTransformationMethod;
 import android.util.Patterns;
 import android.view.View;
+import android.view.animation.Animation;
+import android.view.animation.AnimationUtils;
 import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.EditText;
 import android.widget.ProgressBar;
+import android.widget.TextView;
 import android.widget.Toast;
-
 import androidx.appcompat.app.AppCompatActivity;
-
 import com.example.ingsw_cinemates20.R;
 import com.example.ingsw_cinemates20.entity.Utente;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
-
 import java.util.Objects;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
@@ -30,8 +30,11 @@ public class SigninActivity extends AppCompatActivity {
     private EditText name, surname, email, pass, confPass, city, telephone;
     private CheckBox gdpr;
     private ProgressBar progressBar;
-    private Button vPass, visConfPass;
-    int counter=0, r, counter2=0, r2;
+    private Button vPass, visConfPass, btnConfirmReg;
+    private TextView policy, txtCreate, termini;
+    int count=0, ris=0, counter2=0, r2=0;
+    private Animation anim = null;
+
 
     DatePickerDialog.OnDateSetListener setListener;
 
@@ -54,24 +57,29 @@ public class SigninActivity extends AppCompatActivity {
         confPass = findViewById(R.id.TextConfPass);
         city = findViewById(R.id.TextCity);
         telephone = findViewById(R.id.TextTelephone);
-
+        policy = findViewById(R.id.textPolicy);
+        txtCreate = findViewById(R.id.txtCreate);
+        termini = findViewById(R.id.termini);
+        btnConfirmReg = findViewById(R.id.btnConfirmReg);
         vPass = (Button) findViewById(R.id.visPass);
         visConfPass = (Button) findViewById(R.id.visConPass);
-
         gdpr = findViewById(R.id.gdprAccept);
         progressBar = findViewById(R.id.progressBar);
 
-        Button buttonSignin = findViewById(R.id.buttonConfirmSignin);
-        buttonSignin.setOnClickListener(v -> registerUser());
+        btnConfirmReg.setOnClickListener(v -> registerUser());
 
+        anim = AnimationUtils.loadAnimation(getApplicationContext(),R.anim.anim_bottone);
 
+        Animazioni();
+
+        // Pulsanti
 
         vPass.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                counter++;
-                r= counter %2;
-                if(r !=0 ){
+                count++;
+                ris= count %2;
+                if(ris !=0 ){
                     pass.setTransformationMethod(HideReturnsTransformationMethod.getInstance());
                     vPass.getBackground().setAlpha(50);
                 }else{
@@ -96,7 +104,48 @@ public class SigninActivity extends AppCompatActivity {
             }
         });
 
+        btnConfirmReg.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                btnConfirmReg.startAnimation(anim);
+            }
+        });
+
     }
+
+
+
+private void Animazioni(){
+
+    txtCreate.setTranslationY(1000);
+    txtCreate.animate().translationY(0).setDuration(700).setStartDelay(200).start();
+    name.setTranslationX(1000);
+    name.animate().translationX(0).setDuration(700).setStartDelay(600).start();
+    surname.setTranslationX(1000);
+    surname.animate().translationX(0).setDuration(700).setStartDelay(800).start();
+    email.setTranslationX(1000);
+    email.animate().translationX(0).setDuration(700).setStartDelay(1000).start();
+    city.setTranslationX(1000);
+    city.animate().translationX(0).setDuration(700).setStartDelay(1400).start();
+    telephone.setTranslationX(1000);
+    telephone.animate().translationX(0).setDuration(700).setStartDelay(1200).start();
+    policy.setTranslationX(1000);
+    policy.animate().translationX(0).setDuration(700).setStartDelay(1600).start();
+    pass.setTranslationX(1000);
+    pass.animate().translationX(0).setDuration(700).setStartDelay(1800).start();
+    confPass.setTranslationX(1000);
+    confPass.animate().translationX(0).setDuration(700).setStartDelay(2000).start();
+    vPass.setTranslationX(1000);
+    vPass.animate().translationX(0).setDuration(700).setStartDelay(1800).start();
+    visConfPass.setTranslationX(1000);
+    visConfPass.animate().translationX(0).setDuration(700).setStartDelay(2000).start();
+    gdpr.setTranslationY(1000);
+    gdpr.animate().translationY(0).setDuration(700).setStartDelay(1400).start();
+    termini.setTranslationY(1000);
+    termini.animate().translationY(0).setDuration(700).setStartDelay(1600).start();
+    btnConfirmReg.setTranslationY(1000);
+    btnConfirmReg.animate().translationY(0).setDuration(800).setStartDelay(1800).start();
+}
 
     private void registerUser() {
 

@@ -42,7 +42,8 @@ public class LoginActivity extends AppCompatActivity {
     private Button buttonFB, buttonGG, buttonLogin, visPass, eye;
     private ProgressBar progressBar;
     private int counter=0, r;
-    private Animation animazione = null;
+
+    private Animation anim = null;
 
 
     private FirebaseAuth mAuth;
@@ -63,12 +64,12 @@ public class LoginActivity extends AppCompatActivity {
         textView = (TextView) findViewById(R.id.textView);
 
         visPass = (Button) findViewById(R.id.eye);
-
         buttonLogin = (Button) findViewById(R.id.buttonLogin);
         eye = (Button) findViewById(R.id.eye);
-
         buttonFB = (Button) findViewById(R.id.buttonLoginFB);
         buttonGG = (Button) findViewById(R.id.buttonLoginGG);
+
+        anim = AnimationUtils.loadAnimation(getApplicationContext(),R.anim.anim_bottone);
 
         mAuth = FirebaseAuth.getInstance();
 
@@ -76,29 +77,9 @@ public class LoginActivity extends AppCompatActivity {
 
         setupFB();
         setupGG();
+        
+        Animazioni();
 
-        //
-        postalAddressEmail.setTranslationX(1000);
-        postalAddressEmail.animate().translationX(0).setDuration(1000).setStartDelay(400).start();
-        passwordPass.setTranslationX(1000);
-        passwordPass.animate().translationX(0).setDuration(1000).setStartDelay(600).start();
-        buttonLogin.setTranslationX(1000);
-        buttonLogin.animate().translationX(0).setDuration(1000).setStartDelay(800).start();
-        textViewRecovery.setTranslationX(1000);
-        textViewRecovery.animate().translationX(0).setDuration(1000).setStartDelay(1000).start();
-        eye.setTranslationX(1000);
-        eye.animate().translationX(0).setDuration(1000).setStartDelay(600).start();
-
-        buttonFB.setTranslationY(1000);
-        buttonFB.animate().translationY(0).setDuration(1000).setStartDelay(400).start();
-        buttonGG.setTranslationY(1000);
-        buttonGG.animate().translationY(0).setDuration(1000).setStartDelay(600).start();
-        textView.setTranslationY(1000);
-        textView.animate().translationY(0).setDuration(1000).setStartDelay(800).start();
-        textViewSignUp.setTranslationY(1000);
-        textViewSignUp.animate().translationY(0).setDuration(1000).setStartDelay(1000).start();
-
-        //
 
         visPass.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -131,6 +112,7 @@ public class LoginActivity extends AppCompatActivity {
         buttonFB.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                buttonFB.startAnimation(anim);
                 signInFacebook();
             }
         });
@@ -138,6 +120,7 @@ public class LoginActivity extends AppCompatActivity {
         buttonGG.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                buttonGG.startAnimation(anim);
                 signInGoogle();
             }
         });
@@ -145,17 +128,38 @@ public class LoginActivity extends AppCompatActivity {
         buttonLogin.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                signInClassic();
+
+           buttonLogin.startAnimation(anim);
+           signInClassic();
             }
         });
 
     }
 
-    //
-    public void avviaAnimazione(View view){
-        buttonLogin.startAnimation(animazione);
+
+    private void Animazioni(){
+        postalAddressEmail.setTranslationX(1000);
+        postalAddressEmail.animate().translationX(0).setDuration(800).setStartDelay(400).start();
+        passwordPass.setTranslationX(1000);
+        passwordPass.animate().translationX(0).setDuration(800).setStartDelay(600).start();
+        buttonLogin.setTranslationX(1000);
+        buttonLogin.animate().translationX(0).setDuration(800).setStartDelay(800).start();
+        textViewRecovery.setTranslationX(1000);
+        textViewRecovery.animate().translationX(0).setDuration(800).setStartDelay(1000).start();
+        eye.setTranslationX(1000);
+        eye.animate().translationX(0).setDuration(1000).setStartDelay(600).start();
+
+        buttonFB.setTranslationY(1000);
+        buttonFB.animate().translationY(0).setDuration(800).setStartDelay(400).start();
+        buttonGG.setTranslationY(1000);
+        buttonGG.animate().translationY(0).setDuration(800).setStartDelay(600).start();
+        textView.setTranslationY(1000);
+        textView.animate().translationY(0).setDuration(800).setStartDelay(800).start();
+        textViewSignUp.setTranslationY(1000);
+        textViewSignUp.animate().translationY(0).setDuration(800).setStartDelay(1000).start();
+
     }
-    //
+
 
     @Override
     public void onStart() {
