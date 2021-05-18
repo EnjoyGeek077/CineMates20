@@ -7,6 +7,8 @@ import android.text.method.HideReturnsTransformationMethod;
 import android.text.method.PasswordTransformationMethod;
 import android.util.Log;
 import android.view.View;
+import android.view.animation.Animation;
+import android.view.animation.AnimationUtils;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ProgressBar;
@@ -36,10 +38,12 @@ public class LoginActivity extends AppCompatActivity {
     private static final String TAG = "google_sing_tag";
 
     private EditText postalAddressEmail, passwordPass;
-    private TextView textViewRecovery, textViewSignUp;
-    private Button buttonFB, buttonGG, buttonLogin, visPass;
+    private TextView textViewRecovery, textViewSignUp, textView;
+    private Button buttonFB, buttonGG, buttonLogin, visPass, eye;
     private ProgressBar progressBar;
-    int counter=0, r;
+    private int counter=0, r;
+    private Animation animazione = null;
+
 
     private FirebaseAuth mAuth;
 
@@ -56,12 +60,12 @@ public class LoginActivity extends AppCompatActivity {
 
         textViewRecovery = (TextView) findViewById(R.id.textViewRecovery);
         textViewSignUp = (TextView) findViewById(R.id.textViewSignUp);
+        textView = (TextView) findViewById(R.id.textView);
 
-        //
         visPass = (Button) findViewById(R.id.eye);
-        //
 
         buttonLogin = (Button) findViewById(R.id.buttonLogin);
+        eye = (Button) findViewById(R.id.eye);
 
         buttonFB = (Button) findViewById(R.id.buttonLoginFB);
         buttonGG = (Button) findViewById(R.id.buttonLoginGG);
@@ -73,6 +77,29 @@ public class LoginActivity extends AppCompatActivity {
         setupFB();
         setupGG();
 
+        //
+        postalAddressEmail.setTranslationX(1000);
+        postalAddressEmail.animate().translationX(0).setDuration(1000).setStartDelay(400).start();
+        passwordPass.setTranslationX(1000);
+        passwordPass.animate().translationX(0).setDuration(1000).setStartDelay(600).start();
+        buttonLogin.setTranslationX(1000);
+        buttonLogin.animate().translationX(0).setDuration(1000).setStartDelay(800).start();
+        textViewRecovery.setTranslationX(1000);
+        textViewRecovery.animate().translationX(0).setDuration(1000).setStartDelay(1000).start();
+        eye.setTranslationX(1000);
+        eye.animate().translationX(0).setDuration(1000).setStartDelay(600).start();
+
+        buttonFB.setTranslationY(1000);
+        buttonFB.animate().translationY(0).setDuration(1000).setStartDelay(400).start();
+        buttonGG.setTranslationY(1000);
+        buttonGG.animate().translationY(0).setDuration(1000).setStartDelay(600).start();
+        textView.setTranslationY(1000);
+        textView.animate().translationY(0).setDuration(1000).setStartDelay(800).start();
+        textViewSignUp.setTranslationY(1000);
+        textViewSignUp.animate().translationY(0).setDuration(1000).setStartDelay(1000).start();
+
+        //
+
         visPass.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -80,8 +107,10 @@ public class LoginActivity extends AppCompatActivity {
                 r= counter %2;
                 if(r !=0 ){
                 passwordPass.setTransformationMethod(HideReturnsTransformationMethod.getInstance());
+                visPass.getBackground().setAlpha(50);
             }else{
                     passwordPass.setTransformationMethod(PasswordTransformationMethod.getInstance());
+                    visPass.getBackground().setAlpha(200);
                 }
                 }
         });
@@ -121,6 +150,12 @@ public class LoginActivity extends AppCompatActivity {
         });
 
     }
+
+    //
+    public void avviaAnimazione(View view){
+        buttonLogin.startAnimation(animazione);
+    }
+    //
 
     @Override
     public void onStart() {

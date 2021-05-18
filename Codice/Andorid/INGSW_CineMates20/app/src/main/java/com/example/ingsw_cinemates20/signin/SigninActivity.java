@@ -31,7 +31,7 @@ public class SigninActivity extends AppCompatActivity {
     private CheckBox gdpr;
     private ProgressBar progressBar;
     private Button vPass, visConfPass;
-    int counter=0, r;
+    int counter=0, r, counter2=0, r2;
 
     DatePickerDialog.OnDateSetListener setListener;
 
@@ -73,21 +73,25 @@ public class SigninActivity extends AppCompatActivity {
                 r= counter %2;
                 if(r !=0 ){
                     pass.setTransformationMethod(HideReturnsTransformationMethod.getInstance());
+                    vPass.getBackground().setAlpha(50);
                 }else{
                     pass.setTransformationMethod(PasswordTransformationMethod.getInstance());
+                    vPass.getBackground().setAlpha(200);
                 }
             }
         });
 
         visConfPass.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View v) {
-                counter++;
-                r= counter %2;
-                if(r !=0 ){
+            public void onClick(View view) {
+                counter2++;
+                r2= counter2 %2;
+                if(r2 !=0 ){
                     confPass.setTransformationMethod(HideReturnsTransformationMethod.getInstance());
+                    visConfPass.getBackground().setAlpha(50);
                 }else{
                     confPass.setTransformationMethod(PasswordTransformationMethod.getInstance());
+                    visConfPass.getBackground().setAlpha(200);
                 }
             }
         });
