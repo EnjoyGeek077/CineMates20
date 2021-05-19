@@ -2,7 +2,6 @@ package com.example.ingsw_cinemates20.login;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.text.InputType;
 import android.text.method.HideReturnsTransformationMethod;
 import android.text.method.PasswordTransformationMethod;
 import android.util.Log;
@@ -13,6 +12,7 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ProgressBar;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
@@ -40,15 +40,14 @@ public class LoginActivity extends AppCompatActivity {
     private EditText postalAddressEmail, passwordPass;
     private TextView textViewRecovery, textViewSignUp, textView;
     private Button buttonFB, buttonGG, buttonLogin, visPass, eye;
+
     private ProgressBar progressBar;
+
     private int counter=0, r;
-
     private Animation anim = null;
-
 
     private FirebaseAuth mAuth;
 
-    private CallbackManager callbackManager;
     private GoogleSignInClient mGoogleSignInClient;
 
     @Override
@@ -56,18 +55,18 @@ public class LoginActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.login);
 
-        postalAddressEmail = (EditText) findViewById(R.id.postalAddressEmail);
-        passwordPass = (EditText) findViewById(R.id.passwordPass);
+        postalAddressEmail = findViewById(R.id.postalAddressEmail);
+        passwordPass = findViewById(R.id.passwordPass);
 
-        textViewRecovery = (TextView) findViewById(R.id.textViewRecovery);
-        textViewSignUp = (TextView) findViewById(R.id.textViewSignUp);
-        textView = (TextView) findViewById(R.id.textView);
+        textViewRecovery = findViewById(R.id.textViewRecovery);
+        textViewSignUp = findViewById(R.id.textViewSignUp);
+        textView = findViewById(R.id.textView);
 
-        visPass = (Button) findViewById(R.id.eye);
-        buttonLogin = (Button) findViewById(R.id.buttonLogin);
-        eye = (Button) findViewById(R.id.eye);
-        buttonFB = (Button) findViewById(R.id.buttonLoginFB);
-        buttonGG = (Button) findViewById(R.id.buttonLoginGG);
+        visPass = findViewById(R.id.eye);
+        buttonLogin = findViewById(R.id.buttonLogin);
+        eye = findViewById(R.id.eye);
+        buttonFB = findViewById(R.id.buttonLoginFB);
+        buttonGG = findViewById(R.id.buttonLoginGG);
 
         anim = AnimationUtils.loadAnimation(getApplicationContext(),R.anim.anim_bottone);
 
@@ -78,8 +77,7 @@ public class LoginActivity extends AppCompatActivity {
         setupFB();
         setupGG();
         
-        Animazioni();
-
+        animazioni();
 
         visPass.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -95,7 +93,6 @@ public class LoginActivity extends AppCompatActivity {
                 }
                 }
         });
-
 
         textViewSignUp.setOnClickListener(new View.OnClickListener(){
             @Override
@@ -137,7 +134,7 @@ public class LoginActivity extends AppCompatActivity {
     }
 
 
-    private void Animazioni(){
+    private void animazioni(){
         postalAddressEmail.setTranslationX(1000);
         postalAddressEmail.animate().translationX(0).setDuration(800).setStartDelay(400).start();
         passwordPass.setTranslationX(1000);
@@ -160,17 +157,38 @@ public class LoginActivity extends AppCompatActivity {
 
     }
 
-
     @Override
     public void onStart() {
         super.onStart();
         // Check if user is signed in (non-null) and update UI accordingly.
         FirebaseUser currentUser = mAuth.getCurrentUser();
-        //updateUI(currentUser);
+        if (currentUser != null) {
+            currentUser.reload();
+        }
+    }
+
+    private void checkIfEmailVerified() {
+        FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
+
+        assert user != null;
+        if (user.isEmailVerified())
+        {
+            // user is verified, so you can finish this activity or send user to activity which you want.
+            finish();
+            Toast.makeText(LoginActivity.this, "Successfully logged in", Toast.LENGTH_SHORT).show();
+        }
+        else
+        {
+            // email is not verified, so just prompt the message to the user and restart this activity.
+            // NOTE: don't forget to log out the user.
+            FirebaseAuth.getInstance().signOut();
+
+            //restart this activity
+        }
     }
 
     private void signInClassic() {
-
+        FirebaseAuth.getInstance().signOut();
     }
 
     ////////////////////////////////////////////////////////////////////////////////////////////////
@@ -182,7 +200,7 @@ public class LoginActivity extends AppCompatActivity {
 
         //HASH: ---
 
-        callbackManager = CallbackManager.Factory.create();
+        CallbackManager callbackManager = CallbackManager.Factory.create();
 
         //buttonFB.setReadPermissions(Arrays.asList("email","public_profile"));
 //
