@@ -65,8 +65,6 @@ public class SigninActivity extends AppCompatActivity {
 
         progressBar = findViewById(R.id.progressBar);
 
-        btnConfirmReg.setOnClickListener(v -> registerUser());
-
         anim = AnimationUtils.loadAnimation(getApplicationContext(),R.anim.anim_bottone);
 
         animazioni();
@@ -102,10 +100,9 @@ public class SigninActivity extends AppCompatActivity {
         });
 
         btnConfirmReg.setOnClickListener(v -> {
-            registerUser();
             btnConfirmReg.startAnimation(anim);
+            registerUser();
         });
-
     }
 
 
