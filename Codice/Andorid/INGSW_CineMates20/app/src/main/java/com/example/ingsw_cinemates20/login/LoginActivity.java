@@ -101,6 +101,9 @@ public class LoginActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 startActivity(new Intent(LoginActivity.this, SigninActivity.class));
+                // Animazione per apertura della pagina
+              //  overridePendingTransition(R.anim.frame_in,R.anim.frame_in);
+                //
             }});
 
         textViewRecovery.setOnClickListener(new View.OnClickListener() {

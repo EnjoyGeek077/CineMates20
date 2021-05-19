@@ -66,8 +66,6 @@ public class SigninActivity extends AppCompatActivity {
         gdpr = findViewById(R.id.gdprAccept);
         progressBar = findViewById(R.id.progressBar);
 
-        btnConfirmReg.setOnClickListener(v -> registerUser());
-
         anim = AnimationUtils.loadAnimation(getApplicationContext(),R.anim.anim_bottone);
 
         Animazioni();
@@ -107,7 +105,9 @@ public class SigninActivity extends AppCompatActivity {
         btnConfirmReg.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+
                 btnConfirmReg.startAnimation(anim);
+                registerUser();
             }
         });
 
