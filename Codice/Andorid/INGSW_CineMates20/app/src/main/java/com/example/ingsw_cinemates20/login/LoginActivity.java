@@ -44,7 +44,7 @@ public class LoginActivity extends AppCompatActivity {
     private ProgressBar progressBar;
 
     private int counter=0, r;
-    private Animation anim = null;
+    private Animation anim_btn = null, anim_txtview = null;
 
     private FirebaseAuth mAuth;
 
@@ -68,7 +68,8 @@ public class LoginActivity extends AppCompatActivity {
         buttonFB = findViewById(R.id.buttonLoginFB);
         buttonGG = findViewById(R.id.buttonLoginGG);
 
-        anim = AnimationUtils.loadAnimation(getApplicationContext(),R.anim.anim_bottone);
+        anim_btn = AnimationUtils.loadAnimation(getApplicationContext(),R.anim.anim_bottone);
+        anim_txtview = AnimationUtils.loadAnimation(getApplicationContext(),R.anim.anim_textview);
 
         mAuth = FirebaseAuth.getInstance();
 
@@ -112,7 +113,7 @@ public class LoginActivity extends AppCompatActivity {
         buttonFB.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                buttonFB.startAnimation(anim);
+                buttonFB.startAnimation(anim_btn);
                 signInFacebook();
             }
         });
@@ -120,7 +121,7 @@ public class LoginActivity extends AppCompatActivity {
         buttonGG.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                buttonGG.startAnimation(anim);
+                buttonGG.startAnimation(anim_btn);
                 signInGoogle();
             }
         });
@@ -129,8 +130,24 @@ public class LoginActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
-           buttonLogin.startAnimation(anim);
+           buttonLogin.startAnimation(anim_btn);
            signInClassic();
+            }
+        });
+
+        postalAddressEmail.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                postalAddressEmail.startAnimation(anim_txtview);
+            }
+        });
+
+        passwordPass.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                passwordPass.startAnimation(anim_txtview);
             }
         });
 

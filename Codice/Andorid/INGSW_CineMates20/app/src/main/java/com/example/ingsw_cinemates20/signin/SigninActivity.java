@@ -34,7 +34,7 @@ public class SigninActivity extends AppCompatActivity {
     private TextView textPolicy, txtCreate, txtTermini;
 
     int count=0, ris=0, counter2=0, r2=0;
-    private Animation anim = null;
+    private Animation anim_btn = null, anim_txtview = null;
 
     FirebaseAuth mAuth;
 
@@ -65,7 +65,8 @@ public class SigninActivity extends AppCompatActivity {
 
         progressBar = findViewById(R.id.progressBar);
 
-        anim = AnimationUtils.loadAnimation(getApplicationContext(),R.anim.anim_bottone);
+        anim_btn = AnimationUtils.loadAnimation(getApplicationContext(),R.anim.anim_bottone);
+        anim_txtview = AnimationUtils.loadAnimation(getApplicationContext(),R.anim.anim_textview);
 
         animazioni();
 
@@ -100,8 +101,58 @@ public class SigninActivity extends AppCompatActivity {
         });
 
         btnConfirmReg.setOnClickListener(v -> {
-            btnConfirmReg.startAnimation(anim);
+            btnConfirmReg.startAnimation(anim_btn);
             registerUser();
+        });
+
+        name.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                name.startAnimation(anim_txtview);
+            }
+        });
+        surname.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                surname.startAnimation(anim_txtview);
+            }
+        });
+        email.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                email.startAnimation(anim_txtview);
+            }
+        });
+        pass.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                pass.startAnimation(anim_txtview);
+            }
+        });
+        city.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                city.startAnimation(anim_txtview);
+            }
+        });
+        confPass.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                confPass.startAnimation(anim_txtview);
+            }
+        });
+        telephone.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                telephone.startAnimation(anim_txtview);
+            }
         });
     }
 
@@ -237,7 +288,7 @@ public class SigninActivity extends AppCompatActivity {
     }
 
     private boolean verificaPass(String password) {
-        Pattern path = Pattern.compile("((?=.*\\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[@#$%]).{8,15})");
+        Pattern path = Pattern.compile("((?=.*\\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[!?&£^*ç@#$%]).{8,15})");
         Matcher m = path.matcher(password);
         return m.matches();
     }
