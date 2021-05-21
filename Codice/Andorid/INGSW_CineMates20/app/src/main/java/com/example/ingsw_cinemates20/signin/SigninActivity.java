@@ -18,6 +18,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.ingsw_cinemates20.R;
 import com.example.ingsw_cinemates20.entity.Utente;
+import com.google.android.material.internal.ViewUtils;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.database.FirebaseDatabase;
@@ -267,21 +268,6 @@ public class SigninActivity extends AppCompatActivity {
 
     }
 
-    //private Bool dateControl() {
-    //        String s;
-    //        Date d= null;
-    //        System.out.println("Inserisci la data nel formato [gg/mm/yyyy]: ");
-    //        Scanner in= new Scanner(System.in);
-    //        s = in.nextLine();
-    //        try{
-    //            DateFormat formatDate = DateFormat.getDateInstance(DateFormat.SHORT, Locale.IT);
-    //            formatDate.setLenient(false); // la conversione deve essere rigorosa
-    //            d = formatDate.parse(s);
-    //        } catch (ParseException e) {
-    //            System.out.println("Formato inserito errato");
-    //        }
-    //        System.out.println(d);
-    // }
 
     private boolean verificaEmail(String email) {
         return Patterns.EMAIL_ADDRESS.matcher(email).matches();
@@ -303,7 +289,7 @@ public class SigninActivity extends AppCompatActivity {
                         Toast.LENGTH_LONG).show();
             } else {
                 Toast.makeText(SigninActivity.this,
-                        "Errore invio email di verifica.",
+                        "Email di verifica non riuscito. \n Procedere con il login.",
                         Toast.LENGTH_LONG).show();
             }
         });
@@ -317,7 +303,6 @@ public class SigninActivity extends AppCompatActivity {
         confPass.setText("");
         city.setText("");
         telephone.setText("");
-        textPolicy.setText("");
         gdpr.setChecked(false);
     }
     private void sendData(Utente user) {
@@ -328,9 +313,6 @@ public class SigninActivity extends AppCompatActivity {
                                 .child(Objects.requireNonNull(FirebaseAuth.getInstance().getCurrentUser()).getUid())
                                 .setValue(user).addOnCompleteListener(taskDB -> {
                                     if(taskDB.isSuccessful()) {
-                                        Toast.makeText(SigninActivity.this,
-                                                "Utente registrato con successo.",
-                                                Toast.LENGTH_LONG).show();
                                         sendVerification();
                                         resetCampi();
                                     }else{

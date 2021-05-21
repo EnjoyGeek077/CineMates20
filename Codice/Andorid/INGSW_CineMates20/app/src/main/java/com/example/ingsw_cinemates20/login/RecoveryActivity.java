@@ -48,9 +48,9 @@ public class RecoveryActivity extends AppCompatActivity {
 
         auth.sendPasswordResetEmail(email).addOnCompleteListener(task -> {
             if(task.isSuccessful()) {
-                Toast.makeText(RecoveryActivity.this, "Recovery mail inviata con successo.", Toast.LENGTH_SHORT).show();
+                Toast.makeText(RecoveryActivity.this, "Email di recupero inviata con successo", Toast.LENGTH_SHORT).show();
             } else {
-                Toast.makeText(RecoveryActivity.this, "Ops, qualcosa è andato storto.", Toast.LENGTH_SHORT).show();
+                Toast.makeText(RecoveryActivity.this, "Ops... qualcosa è andato storto.", Toast.LENGTH_SHORT).show();
             }
         });
     }
