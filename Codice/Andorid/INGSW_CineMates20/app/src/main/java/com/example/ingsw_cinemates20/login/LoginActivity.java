@@ -132,7 +132,8 @@ public class LoginActivity extends AppCompatActivity {
             public void onClick(View v) {
                 buttonLogin.startAnimation(anim_btn);
 ///PROVA
-                startActivity(new Intent(LoginActivity.this, Home.class));
+                setContentView(R.layout.toolbar_menu);
+   //             startActivity(new Intent(LoginActivity.this, Home.class));
 ////FINE PROVA
 
 

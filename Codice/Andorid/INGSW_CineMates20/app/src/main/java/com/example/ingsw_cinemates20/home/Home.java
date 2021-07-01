@@ -21,11 +21,13 @@ public class Home extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+
         super.onCreate(savedInstanceState);
         setContentView(R.layout.toolbar_menu);
 
         drawerLayout = findViewById(R.id.drawer_layout);
     }
+
 
     public void ClickMenu(View view){
         //Open drawer
