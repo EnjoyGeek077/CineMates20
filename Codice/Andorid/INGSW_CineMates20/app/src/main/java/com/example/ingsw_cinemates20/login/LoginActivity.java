@@ -18,6 +18,7 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.ingsw_cinemates20.R;
+import com.example.ingsw_cinemates20.home.Home;
 import com.example.ingsw_cinemates20.signin.SigninActivity;
 import com.facebook.CallbackManager;
 import com.google.android.gms.auth.api.signin.GoogleSignIn;
@@ -129,9 +130,14 @@ public class LoginActivity extends AppCompatActivity {
         buttonLogin.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                buttonLogin.startAnimation(anim_btn);
+///PROVA
+                startActivity(new Intent(LoginActivity.this, Home.class));
+////FINE PROVA
 
-           buttonLogin.startAnimation(anim_btn);
-           signInClassic();
+
+
+ //PER LA PROVA          signInClassic();
             }
         });
 
