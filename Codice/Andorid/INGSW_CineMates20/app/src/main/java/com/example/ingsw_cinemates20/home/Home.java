@@ -6,6 +6,10 @@ import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.ImageView;
+import android.widget.LinearLayout;
+import android.widget.TextView;
+
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.view.GravityCompat;
 import androidx.drawerlayout.widget.DrawerLayout;
@@ -13,25 +17,29 @@ import com.example.ingsw_cinemates20.R;
 import com.example.ingsw_cinemates20.assistance.Assistance;
 import com.example.ingsw_cinemates20.cerca_amico.CercaAmico;
 import com.example.ingsw_cinemates20.cerca_film.CercaFilm;
+import com.example.ingsw_cinemates20.login.LoginActivity;
+import com.example.ingsw_cinemates20.login.RecoveryActivity;
 import com.example.ingsw_cinemates20.profile.Profile;
 import com.example.ingsw_cinemates20.setting.Settings;
+import com.example.ingsw_cinemates20.signin.SigninActivity;
 
 public class Home extends AppCompatActivity {
-    DrawerLayout drawerLayout;
+    DrawerLayout mainNav;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
 
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.toolbar_menu);
+        setContentView(R.layout.home);
 
-        drawerLayout = findViewById(R.id.drawer_layout);
+        mainNav = findViewById(R.id.main_nav);
+
     }
 
 
     public void ClickMenu(View view){
         //Open drawer
-        openDrawer(drawerLayout);
+        openDrawer(mainNav);
 
     }
 
@@ -42,7 +50,7 @@ public class Home extends AppCompatActivity {
 
     public void ClickLogo(View view){
         //Close drawer
-        closeDrawer(drawerLayout);
+        closeDrawer(mainNav);
     }
 
     public static void closeDrawer(DrawerLayout drawerLayout) {
@@ -59,9 +67,9 @@ public class Home extends AppCompatActivity {
         recreate();
     }
 
-    public void ClickProfile(View view){
-        redirectActivity(this, Profile.class);
-    }
+public void ClickProfile(View view){
+      //  redirectActivity(this, Profile.class);
+}
 
     public void ClickSearch_friend(View view){
         redirectActivity(this, CercaAmico.class);
@@ -82,6 +90,8 @@ public class Home extends AppCompatActivity {
     public void ClickLogout(View view){
         logout(this);
     }
+
+
 
     public static void logout(Activity activity){
         //alert dialog
@@ -116,6 +126,6 @@ public class Home extends AppCompatActivity {
     protected void onPause(){
         super.onPause();
         //Close drawer
-        closeDrawer(drawerLayout);
+        closeDrawer(mainNav);
     }
 }

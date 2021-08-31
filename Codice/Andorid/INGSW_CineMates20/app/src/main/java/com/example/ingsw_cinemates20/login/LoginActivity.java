@@ -21,6 +21,7 @@ import com.example.ingsw_cinemates20.R;
 import com.example.ingsw_cinemates20.home.Home;
 import com.example.ingsw_cinemates20.signin.SigninActivity;
 import com.facebook.CallbackManager;
+import com.facebook.Profile;
 import com.google.android.gms.auth.api.signin.GoogleSignIn;
 import com.google.android.gms.auth.api.signin.GoogleSignInAccount;
 import com.google.android.gms.auth.api.signin.GoogleSignInClient;
@@ -132,7 +133,8 @@ public class LoginActivity extends AppCompatActivity {
             public void onClick(View v) {
                 buttonLogin.startAnimation(anim_btn);
 ///PROVA
-                setContentView(R.layout.toolbar_menu);
+
+                setContentView(R.layout.home);
    //             startActivity(new Intent(LoginActivity.this, Home.class));
 ////FINE PROVA
 
