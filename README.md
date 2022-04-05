@@ -1,4 +1,4 @@
-# INGSW_CineMates20
+# CineMates20
 Esame INGSW 2020/21 - CineMates20
 
 Sviluppo del progetto interrotto.
